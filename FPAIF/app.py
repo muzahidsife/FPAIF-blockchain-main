@@ -12,7 +12,8 @@ FIX SUMMARY:
 from fastapi import FastAPI, Request, Form, HTTPException
 from fastapi.responses import HTMLResponse, JSONResponse
 from fastapi.templating import Jinja2Templates
-import uuid, time, json
+import anyio.to_thread
+import asyncio, uuid, time, json
 from datetime import datetime
 from collections import defaultdict
 from db import Database
@@ -29,6 +30,17 @@ identity_manager = IdentityManager(db)
 trust_manager    = TrustManager(db)
 fabric           = get_fabric_client()
 db.init_tables()
+
+# FIX: register_agent/authenticate call the Fabric gateway synchronously
+# (via `requests`). Running that inside `async def` routes blocked the
+# single Uvicorn event loop, serializing every request behind a full
+# blockchain round-trip and causing near-total load-test failure/timeout.
+# Offload those blocking calls to a worker thread via asyncio.to_thread()
+# below, and raise the thread pool size to match expected concurrency
+# (anyio's default limiter is only 40 threads).
+@app.on_event("startup")
+async def _raise_thread_limit():
+    anyio.to_thread.current_default_thread_limiter().total_tokens = 200
 
 # ── Rate limiter ──────────────────────────────────────────────────────────────
 
@@ -194,7 +206,7 @@ async function register() {{
 async def register_agent(agent_name: str = Form(...), role: str = Form(...), request: Request = None):
     try:
         t0 = time.time()
-        did, vc = identity_manager.register_agent(agent_name, role)
+        did, vc = await asyncio.to_thread(identity_manager.register_agent, agent_name, role)
         auth_ms = (time.time() - t0) * 1000
         t_log   = time.time()
         db.log_action(did, "register", "success",
@@ -222,7 +234,7 @@ async def authenticate_agent(did: str = Form(...), credential_hash: str = Form(.
         raise HTTPException(status_code=429, detail="Rate limit exceeded — DDoS protection triggered")
 
     try:
-        if not identity_manager.verify_credential(did, credential_hash):
+        if not await asyncio.to_thread(identity_manager.verify_credential, did, credential_hash):
             auth_ms = (time.time() - t0) * 1000
             t_log   = time.time()
             db.log_action(did, "authenticate", "failed",
@@ -232,7 +244,7 @@ async def authenticate_agent(did: str = Form(...), credential_hash: str = Form(.
 
         # Ledger is authoritative for revocation — fast query, no TX wait.
         try:
-            if fabric.is_revoked(did):
+            if await asyncio.to_thread(fabric.is_revoked, did):
                 auth_ms = (time.time() - t0) * 1000
                 t_log   = time.time()
                 db.log_action(did, "authenticate", "failed",
@@ -336,7 +348,7 @@ async def api_gateway(session_token: str, request: Request = None):
 @app.get("/audit_logs", response_class=HTMLResponse)
 async def audit_logs_page(request: Request):
     try:
-        anchors = fabric.get_audit_anchors().get("anchors", [])
+        anchors = (await asyncio.to_thread(fabric.get_audit_anchors)).get("anchors", [])
     except Exception:
         anchors = []
     return templates.TemplateResponse(request, "audit_logs.html",
@@ -367,7 +379,9 @@ async def trigger_anchor(session_token: str = Form(...)):
     root_hash  = audit_verify.compute_chain_tip(chain_rows)
 
     try:
-        response = fabric.anchor_audit_batch(root_hash, len(new_rows), period_start, period_end)
+        response = await asyncio.to_thread(
+            fabric.anchor_audit_batch, root_hash, len(new_rows), period_start, period_end
+        )
     except Exception as e:
         raise HTTPException(status_code=503, detail=f"Fabric anchor failed: {e}")
 
@@ -387,7 +401,7 @@ async def trigger_anchor(session_token: str = Form(...)):
 @app.get("/verify_batch/{batch_id}")
 async def verify_batch_endpoint(batch_id: str):
     try:
-        return JSONResponse(audit_verify.verify_batch(db, fabric, batch_id))
+        return JSONResponse(await asyncio.to_thread(audit_verify.verify_batch, db, fabric, batch_id))
     except Exception as e:
         raise HTTPException(status_code=503, detail=f"Fabric ledger unavailable — cannot verify batch: {e}")
 
@@ -397,7 +411,7 @@ async def verify_batch_endpoint(batch_id: str):
 async def test_flow():
     try:
         t0  = time.time()
-        did, vc = identity_manager.register_agent("TestAgent_Admin", "admin")
+        did, vc = await asyncio.to_thread(identity_manager.register_agent, "TestAgent_Admin", "admin")
         session_token = str(uuid.uuid4())
         db.create_session(session_token, did, "admin")
         session_info = db.get_session_details(session_token)
