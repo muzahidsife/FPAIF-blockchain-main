@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Audit Logs — FPAIF</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400&display=swap');
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Inter',sans-serif;background:linear-gradient(135deg,#0a0e27 0%,#1a1f3a 50%,#0f1419 100%);color:#e0e7ff;min-height:100vh}
+nav{display:flex;gap:8px;padding:16px 40px;background:rgba(0,0,0,.3);border-bottom:1px solid rgba(0,212,255,.15);flex-wrap:wrap}
+nav a{color:#a5b4fc;text-decoration:none;padding:8px 16px;border-radius:8px;font-size:13px;font-weight:500;transition:all .2s}
+nav a:hover{background:rgba(0,212,255,.1);color:#00d4ff}
+.page{max-width:1300px;margin:0 auto;padding:36px 24px}
+h1{font-size:28px;font-weight:700;color:#00d4ff;margin-bottom:6px}
+.sub{color:#a5b4fc;font-size:13px;margin-bottom:24px}
+table{width:100%;border-collapse:collapse;font-size:12px}
+th{background:rgba(0,212,255,.1);color:#00d4ff;padding:10px 12px;text-align:left;border-bottom:1px solid rgba(0,212,255,.2);font-weight:600;text-transform:uppercase;letter-spacing:.5px}
+td{padding:9px 12px;border-bottom:1px solid rgba(255,255,255,.05);font-family:'JetBrains Mono',monospace;font-size:11px;max-width:220px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+tr:hover{background:rgba(0,212,255,.04)}
+.success{color:#00ff96}.failed{color:#ff5050}.error{color:#ff5050}.denied{color:#ff8800}
+.pending{color:#ffb020}
+.ms{color:#ffd700}
+.empty{text-align:center;color:#4b5563;padding:32px}
+.panel{margin-top:32px}
+.panel h2{color:#00d4ff;font-size:18px;margin-bottom:6px}
+.panel .sub{margin-bottom:16px}
+.verify-btn{padding:5px 12px;background:rgba(0,212,255,.1);border:1px solid rgba(0,212,255,.3);border-radius:6px;color:#00d4ff;font-size:11px;font-weight:600;cursor:pointer;font-family:'Inter',sans-serif}
+.verify-btn:hover{background:rgba(0,212,255,.2)}
+.verify-btn:disabled{opacity:.5;cursor:default}
+.verify-result{font-family:'JetBrains Mono',monospace;font-size:11px}
+.anchor-controls{display:flex;align-items:center;gap:10px;margin-bottom:16px;flex-wrap:wrap}
+.token-input{padding:8px 12px;background:rgba(0,212,255,.06);border:1px solid rgba(0,212,255,.25);border-radius:6px;color:#e0e7ff;font-size:12px;font-family:'JetBrains Mono',monospace;outline:none;width:260px}
+.token-input:focus{border-color:rgba(0,212,255,.6)}
+.btn{padding:9px 20px;background:linear-gradient(135deg,#00d4ff,#00ffd1);color:#0a0e27;border:none;border-radius:8px;font-weight:700;font-size:13px;cursor:pointer;font-family:'Inter',sans-serif}
+.btn:hover{filter:brightness(1.05)}
+.btn:disabled{opacity:.5;cursor:default}
+.anchor-status{font-family:'JetBrains Mono',monospace;font-size:12px}
+</style>
+</head>
+<body>
+<nav>
+  <a href="/">🏠 Home</a>
+  <a href="/register_agent">🔐 Register Agent</a>
+  <a href="/audit_logs">📋 Audit Logs</a>
+  <a href="/docs">📚 API Docs</a>
+  <a href="/test_flow">⚡ Test Flow</a>
+</nav>
+<div class="page">
+  <h1>📋 Audit Logs</h1>
+  <p class="sub">All agent events with auth time (ms) and log write latency (ms).</p>
+  <table>
+    <thead>
+      <tr>
+        <th>#</th>
+        <th>Timestamp</th>
+        <th>Agent DID</th>
+        <th>Action</th>
+        <th>Result</th>
+        <th>Auth Time (ms)</th>
+        <th>Log Time (ms)</th>
+        <th>Chain Status</th>
+        <th>Details</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for log in logs %}
+      <tr>
+        <td>{{ log.id }}</td>
+        <td>{{ log.timestamp }}</td>
+        <td title="{{ log.agent_did }}">{{ (log.agent_did or '—')[:24] }}…</td>
+        <td>{{ log.action }}</td>
+        <td class="{{ log.result }}">{{ log.result }}</td>
+        <td class="ms">{{ "%.3f"|format(log.auth_time_ms or 0) }}</td>
+        <td class="ms">{{ "%.3f"|format(log.log_time_ms or 0) }}</td>
+        <td class="{{ 'success' if log.anchor_batch_id else 'pending' }}">{{ 'anchored' if log.anchor_batch_id else 'pending' }}</td>
+        <td title="{{ log.details }}">{{ (log.details or '—')[:40] }}</td>
+      </tr>
+      {% else %}
+      <tr><td colspan="9" class="empty">No logs yet. Run test_flow or the simulation script.</td></tr>
+      {% endfor %}
+    </tbody>
+  </table>
+
+  <div class="panel">
+    <h2>⚓ Anchor Batches</h2>
+    <p class="sub">Batches anchored to the Fabric ledger. "Verify" recomputes the local chain and compares it to the on-chain root.</p>
+    <div class="anchor-controls">
+      <input type="password" id="admin-token" class="token-input" placeholder="Admin session token" title="Session token for an admin-role session, e.g. from /authenticate">
+      <button class="btn" id="trigger-anchor-btn" onclick="triggerAnchor()">Trigger anchor now</button>
+      <span class="anchor-status" id="anchor-status"></span>
+    </div>
+    <table>
+      <thead>
+        <tr>
+          <th>Batch ID</th>
+          <th>Period Start</th>
+          <th>Period End</th>
+          <th>Event Count</th>
+          <th>Root Hash</th>
+          <th>Tx ID</th>
+          <th>Verify</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for anchor in anchors %}
+        <tr>
+          <td title="{{ anchor.batchId }}">{{ anchor.batchId }}</td>
+          <td>{{ anchor.periodStart }}</td>
+          <td>{{ anchor.periodEnd }}</td>
+          <td>{{ anchor.eventCount }}</td>
+          <td title="{{ anchor.rootHash }}">{{ (anchor.rootHash or '—')[:16] }}…</td>
+          <td title="{{ anchor.txId }}">{{ (anchor.txId or '—')[:16] }}{{ '…' if anchor.txId else '' }}</td>
+          <td>
+            <button class="verify-btn" onclick="verifyBatch('{{ anchor.batchId }}', this)">Verify</button>
+            <span class="verify-result" id="verify-{{ loop.index }}"></span>
+          </td>
+        </tr>
+        {% else %}
+        <tr><td colspan="7" class="empty">No batches anchored yet.</td></tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+</div>
+<script>
+const ADMIN_TOKEN_KEY = 'fpaif_admin_session_token';
+const tokenInput = document.getElementById('admin-token');
+tokenInput.value = localStorage.getItem(ADMIN_TOKEN_KEY) || '';
+tokenInput.addEventListener('input', () => localStorage.setItem(ADMIN_TOKEN_KEY, tokenInput.value));
+
+async function triggerAnchor() {
+  const btn = document.getElementById('trigger-anchor-btn');
+  const statusEl = document.getElementById('anchor-status');
+  const token = tokenInput.value.trim();
+
+  if (!token) {
+    statusEl.textContent = '✗ enter an admin session token first';
+    statusEl.className = 'anchor-status failed';
+    return;
+  }
+
+  btn.disabled = true;
+  statusEl.textContent = 'Anchoring…';
+  statusEl.className = 'anchor-status ms';
+
+  try {
+    const fd = new FormData();
+    fd.append('session_token', token);
+    const res = await fetch('/trigger_anchor', { method: 'POST', body: fd });
+    const data = await res.json();
+
+    if (!res.ok) {
+      statusEl.textContent = '✗ ' + (data.detail || 'request failed');
+      statusEl.className = 'anchor-status failed';
+      btn.disabled = false;
+      return;
+    }
+
+    if (!data.anchored) {
+      statusEl.textContent = data.message || 'Nothing to anchor.';
+      statusEl.className = 'anchor-status ms';
+      btn.disabled = false;
+      return;
+    }
+
+    statusEl.textContent = `✓ anchored batch ${data.batch_id} — reloading…`;
+    statusEl.className = 'anchor-status success';
+    location.reload();
+  } catch (e) {
+    statusEl.textContent = '✗ request failed';
+    statusEl.className = 'anchor-status failed';
+    btn.disabled = false;
+  }
+}
+
+async function verifyBatch(batchId, btn) {
+  const row = btn.closest('tr');
+  const resultEl = row.querySelector('.verify-result');
+  btn.disabled = true;
+  resultEl.textContent = 'checking…';
+  resultEl.className = 'verify-result ms';
+  try {
+    const res = await fetch(`/verify_batch/${encodeURIComponent(batchId)}`);
+    const data = await res.json();
+    if (!res.ok) {
+      resultEl.textContent = '✗ ' + (data.detail || 'request failed');
+      resultEl.className = 'verify-result failed';
+    } else if (data.match) {
+      resultEl.textContent = '✓ match';
+      resultEl.className = 'verify-result success';
+    } else {
+      resultEl.textContent = '✗ mismatch — ' + (data.reason || 'unknown');
+      resultEl.className = 'verify-result failed';
+    }
+  } catch (e) {
+    resultEl.textContent = '✗ request failed';
+    resultEl.className = 'verify-result failed';
+  } finally {
+    btn.disabled = false;
+  }
+}
+</script>
+</body>
+</html>

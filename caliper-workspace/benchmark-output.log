@@ -1,0 +1,244 @@
+2025.11.09-21:29:48.825[32m info [39m [caliper] [cli-launch-manager] 	Set workspace path: /home/sabbir/PROJECTS/working_with_explorer/water_sensor_ranking_in_privet_block_chain/caliper-workspace
+2025.11.09-21:29:48.826[32m info [39m [caliper] [cli-launch-manager] 	Set benchmark configuration path: /home/sabbir/PROJECTS/working_with_explorer/water_sensor_ranking_in_privet_block_chain/caliper-workspace/benchmarks/config.yaml
+2025.11.09-21:29:48.826[32m info [39m [caliper] [cli-launch-manager] 	Set network configuration path: /home/sabbir/PROJECTS/working_with_explorer/water_sensor_ranking_in_privet_block_chain/caliper-workspace/networks/fabric-network.yaml
+2025.11.09-21:29:48.826[32m info [39m [caliper] [cli-launch-manager] 	Set SUT type: fabric
+2025.11.09-21:29:48.830[32m info [39m [caliper] [benchmark-validator] 	No observer specified, will default to `none`
+2025.11.09-21:29:48.830[32m info [39m [caliper] [caliper-engine] 	Starting benchmark flow
+2025.11.09-21:29:48.831[32m info [39m [caliper] [caliper-engine] 	Network configuration attribute "caliper.command.start" is not present, skipping start command
+2025.11.09-21:29:49.280[32m info [39m [caliper] [FabricConnectorFactory] 	Initializing peer gateway connector compatible with installed fabric-gateway SDK: 1.5.0
+2025.11.09-21:29:49.289[32m info [39m [caliper] [IdentityManager] 	Adding User1 (admin=false) as User1 for organization Org1MSP
+2025.11.09-21:29:49.291[32m info [39m [caliper] [connectors/peer-gateway/PeerGateway] 	Fabric-Gateway SDK version: 1.5.0 for Peer-Gateway connector; TLS based on Org1MSP: server
+2025.11.09-21:29:49.291[32m info [39m [caliper] [caliper-engine] 	Executed "init" step in 0.001 seconds
+2025.11.09-21:29:49.292[33m warn [39m [caliper] [connectors/peer-gateway/PeerGateway] 	Install smart contract not available for the Fabric Peer Gateway connector
+2025.11.09-21:29:49.292[32m info [39m [caliper] [caliper-engine] 	Executed "install" step in 0.001 seconds
+2025.11.09-21:29:49.294[32m info [39m [caliper] [monitor.js] 	Attempting to create resource monitor of type docker
+2025.11.09-21:29:49.295[32m info [39m [caliper] [default-observer] 	Observer interval set to 5000 milliseconds
+2025.11.09-21:29:49.297[32m info [39m [caliper] [round-orchestrator] 	Preparing worker connections
+2025.11.09-21:29:49.298[32m info [39m [caliper] [worker-orchestrator] 	Launching worker 1 of 2
+2025.11.09-21:29:49.304[32m info [39m [caliper] [worker-orchestrator] 	Launching worker 2 of 2
+2025.11.09-21:29:49.310[32m info [39m [caliper] [worker-orchestrator] 	Messenger not configured, entering configure phase...
+2025.11.09-21:29:49.311[32m info [39m [caliper] [worker-orchestrator] 	No existing workers detected, entering worker launch phase...
+2025.11.09-21:29:49.311[32m info [39m [caliper] [worker-orchestrator] 	Waiting for 2 workers to be connected...
+2025.11.09-21:29:49.587[32m info [39m [caliper] [cli-launch-worker] 	Set workspace path: /home/sabbir/PROJECTS/working_with_explorer/water_sensor_ranking_in_privet_block_chain/caliper-workspace
+2025.11.09-21:29:49.589[32m info [39m [caliper] [cli-launch-worker] 	Set benchmark configuration path: /home/sabbir/PROJECTS/working_with_explorer/water_sensor_ranking_in_privet_block_chain/caliper-workspace/benchmarks/config.yaml
+2025.11.09-21:29:49.589[32m info [39m [caliper] [cli-launch-worker] 	Set network configuration path: /home/sabbir/PROJECTS/working_with_explorer/water_sensor_ranking_in_privet_block_chain/caliper-workspace/networks/fabric-network.yaml
+2025.11.09-21:29:49.589[32m info [39m [caliper] [cli-launch-worker] 	Set SUT type: fabric
+2025.11.09-21:29:49.599[32m info [39m [caliper] [cli-launch-worker] 	Set workspace path: /home/sabbir/PROJECTS/working_with_explorer/water_sensor_ranking_in_privet_block_chain/caliper-workspace
+2025.11.09-21:29:49.600[32m info [39m [caliper] [cli-launch-worker] 	Set benchmark configuration path: /home/sabbir/PROJECTS/working_with_explorer/water_sensor_ranking_in_privet_block_chain/caliper-workspace/benchmarks/config.yaml
+2025.11.09-21:29:49.600[32m info [39m [caliper] [cli-launch-worker] 	Set network configuration path: /home/sabbir/PROJECTS/working_with_explorer/water_sensor_ranking_in_privet_block_chain/caliper-workspace/networks/fabric-network.yaml
+2025.11.09-21:29:49.600[32m info [39m [caliper] [cli-launch-worker] 	Set SUT type: fabric
+2025.11.09-21:29:49.618[32m info [39m [caliper] [worker-orchestrator] 	2 workers connected, progressing to worker assignment phase.
+2025.11.09-21:29:49.618[32m info [39m [caliper] [worker-orchestrator] 	Workers currently unassigned, awaiting index assignment...
+2025.11.09-21:29:49.618[32m info [39m [caliper] [worker-orchestrator] 	Waiting for 2 workers to be assigned...
+2025.11.09-21:29:49.628[32m info [39m [caliper] [worker-orchestrator] 	2 workers assigned, progressing to worker initialization phase.
+2025.11.09-21:29:49.628[32m info [39m [caliper] [worker-orchestrator] 	Waiting for 2 workers to be ready...
+2025.11.09-21:29:49.629[32m info [39m [caliper] [worker-message-handler] 	Initializing Worker#0...
+2025.11.09-21:29:49.629[32m info [39m [caliper] [worker-message-handler] 	Initializing Worker#1...
+2025.11.09-21:29:50.128[32m info [39m [caliper] [FabricConnectorFactory] 	Initializing peer gateway connector compatible with installed fabric-gateway SDK: 1.5.0
+2025.11.09-21:29:50.141[32m info [39m [caliper] [FabricConnectorFactory] 	Initializing peer gateway connector compatible with installed fabric-gateway SDK: 1.5.0
+2025.11.09-21:29:50.141[32m info [39m [caliper] [IdentityManager] 	Adding User1 (admin=false) as User1 for organization Org1MSP
+2025.11.09-21:29:50.143[32m info [39m [caliper] [worker-message-handler] 	Worker#1 initialized
+2025.11.09-21:29:50.152[32m info [39m [caliper] [IdentityManager] 	Adding User1 (admin=false) as User1 for organization Org1MSP
+2025.11.09-21:29:50.155[32m info [39m [caliper] [worker-message-handler] 	Worker#0 initialized
+2025.11.09-21:29:50.156[32m info [39m [caliper] [worker-orchestrator] 	2 workers ready, progressing to test preparation phase.
+2025.11.09-21:29:50.156[32m info [39m [caliper] [round-orchestrator] 	Started round 1 (addBatchSensorReadings-round1)
+2025.11.09-21:29:50.157[32m info [39m [caliper] [worker-message-handler] 	Preparing Worker#0 for Round#0
+2025.11.09-21:29:50.157[32m info [39m [caliper] [worker-message-handler] 	Preparing Worker#1 for Round#0
+2025.11.09-21:29:50.184[32m info [39m [caliper] [connectors/peer-gateway/PeerGateway] 	Generating contract map for user User1
+2025.11.09-21:29:50.184[32m info [39m [caliper] [caliper-worker] 	Info: worker 0 prepare test phase for round 0 is starting...
+2025.11.09-21:29:50.185[32m info [39m [caliper] [connectors/peer-gateway/PeerGateway] 	Generating contract map for user User1
+2025.11.09-21:29:50.186[32m info [39m [caliper] [caliper-worker] 	Info: worker 1 prepare test phase for round 0 is starting...
+2025.11.09-21:29:50.186[32m info [39m [caliper] [connectors/peer-gateway/PeerGateway] 	disconnecting gateway for user User1
+2025.11.09-21:29:50.187[32m info [39m [caliper] [connectors/peer-gateway/PeerGateway] 	disconnecting gRpc client at peer peer0.org1.example.com
+2025.11.09-21:29:50.187[32m info [39m [caliper] [caliper-worker] 	Info: worker 0 prepare test phase for round 0 is completed
+2025.11.09-21:29:50.187[32m info [39m [caliper] [worker-message-handler] 	Worker#0 prepared for Round#0
+2025.11.09-21:29:50.187[32m info [39m [caliper] [connectors/peer-gateway/PeerGateway] 	disconnecting gateway for user User1
+2025.11.09-21:29:50.188[32m info [39m [caliper] [connectors/peer-gateway/PeerGateway] 	disconnecting gRpc client at peer peer0.org1.example.com
+2025.11.09-21:29:50.188[32m info [39m [caliper] [caliper-worker] 	Info: worker 1 prepare test phase for round 0 is completed
+2025.11.09-21:29:50.188[32m info [39m [caliper] [worker-message-handler] 	Worker#1 prepared for Round#0
+2025.11.09-21:29:50.189[32m info [39m [caliper] [worker-orchestrator] 	2 workers prepared, progressing to test phase.
+2025.11.09-21:29:52.238[32m info [39m [caliper] [round-orchestrator] 	Monitors successfully started
+2025.11.09-21:29:52.240[32m info [39m [caliper] [worker-message-handler] 	Worker#0 is starting Round#0
+2025.11.09-21:29:52.240[32m info [39m [caliper] [worker-message-handler] 	Worker#1 is starting Round#0
+2025.11.09-21:29:52.242[32m info [39m [caliper] [connectors/peer-gateway/PeerGateway] 	Generating contract map for user User1
+2025.11.09-21:29:52.243[32m info [39m [caliper] [connectors/peer-gateway/PeerGateway] 	Generating contract map for user User1
+2025.11.09-21:29:52.244[32m info [39m [caliper] [caliper-worker] 	Worker #0 starting workload loop
+2025.11.09-21:29:52.245[32m info [39m [caliper] [caliper-worker] 	Worker #1 starting workload loop
+2025.11.09-21:29:52.246[31m error[39m [caliper] [connector-base] 	Unexpected error while sending request: Error: Could not find details for contract ID SensorContract
+    at PeerGateway._sendSingleRequest (/home/sabbir/PROJECTS/working_with_explorer/water_sensor_ranking_in_privet_block_chain/caliper-workspace/node_modules/@hyperledger/caliper-fabric/lib/connector-versions/peer-gateway/PeerGateway.js:141:23)
+    at PeerGateway.sendRequests (/home/sabbir/PROJECTS/working_with_explorer/water_sensor_ranking_in_privet_block_chain/caliper-workspace/node_modules/@hyperledger/caliper-core/lib/common/core/connector-base.js:83:37)
+    at AddSensorReadingsWorkload.submitTransaction (/home/sabbir/PROJECTS/working_with_explorer/water_sensor_ranking_in_privet_block_chain/caliper-workspace/benchmarks/workload/addSensorReadings.js:67:31)
+    at /home/sabbir/PROJECTS/working_with_explorer/water_sensor_ranking_in_privet_block_chain/caliper-workspace/node_modules/@hyperledger/caliper-core/lib/worker/caliper-worker.js:97:32
+    at Immediate.<anonymous> (/home/sabbir/PROJECTS/working_with_explorer/water_sensor_ranking_in_privet_block_chain/caliper-workspace/node_modules/@hyperledger/caliper-core/lib/worker/caliper-worker.js:74:17)
+    at process.processImmediate (node:internal/timers:476:21)
+2025.11.09-21:29:52.247[31m error[39m [caliper] [connector-base] 	Unexpected error while sending request: Error: Could not find details for contract ID SensorContract
+    at PeerGateway._sendSingleRequest (/home/sabbir/PROJECTS/working_with_explorer/water_sensor_ranking_in_privet_block_chain/caliper-workspace/node_modules/@hyperledger/caliper-fabric/lib/connector-versions/peer-gateway/PeerGateway.js:141:23)
+    at PeerGateway.sendRequests (/home/sabbir/PROJECTS/working_with_explorer/water_sensor_ranking_in_privet_block_chain/caliper-workspace/node_modules/@hyperledger/caliper-core/lib/common/core/connector-base.js:83:37)
+    at AddSensorReadingsWorkload.submitTransaction (/home/sabbir/PROJECTS/working_with_explorer/water_sensor_ranking_in_privet_block_chain/caliper-workspace/benchmarks/workload/addSensorReadings.js:67:31)
+    at /home/sabbir/PROJECTS/working_with_explorer/water_sensor_ranking_in_privet_block_chain/caliper-workspace/node_modules/@hyperledger/caliper-core/lib/worker/caliper-worker.js:97:32
+    at Immediate.<anonymous> (/home/sabbir/PROJECTS/working_with_explorer/water_sensor_ranking_in_privet_block_chain/caliper-workspace/node_modules/@hyperledger/caliper-core/lib/worker/caliper-worker.js:74:17)
+    at process.processImmediate (node:internal/timers:476:21)
+2025.11.09-21:29:52.283[31m error[39m [caliper] [connector-base] 	Unexpected error while sending request: Error: Could not find details for contract ID SensorContract
+    at PeerGateway._sendSingleRequest (/home/sabbir/PROJECTS/working_with_explorer/water_sensor_ranking_in_privet_block_chain/caliper-workspace/node_modules/@hyperledger/caliper-fabric/lib/connector-versions/peer-gateway/PeerGateway.js:141:23)
+    at PeerGateway.sendRequests (/home/sabbir/PROJECTS/working_with_explorer/water_sensor_ranking_in_privet_block_chain/caliper-workspace/node_modules/@hyperledger/caliper-core/lib/common/core/connector-base.js:83:37)
+    at AddSensorReadingsWorkload.submitTransaction (/home/sabbir/PROJECTS/working_with_explorer/water_sensor_ranking_in_privet_block_chain/caliper-workspace/benchmarks/workload/addSensorReadings.js:67:31)
+    at /home/sabbir/PROJECTS/working_with_explorer/water_sensor_ranking_in_privet_block_chain/caliper-workspace/node_modules/@hyperledger/caliper-core/lib/worker/caliper-worker.js:97:32
+    at Immediate.<anonymous> (/home/sabbir/PROJECTS/working_with_explorer/water_sensor_ranking_in_privet_block_chain/caliper-workspace/node_modules/@hyperledger/caliper-core/lib/worker/caliper-worker.js:74:17)
+    at process.processImmediate (node:internal/timers:476:21)
+2025.11.09-21:29:52.284[31m error[39m [caliper] [caliper-worker] 	Unexpected error in worker #1 caused worker to finish round #0: Error: Could not find details for contract ID SensorContract
+    at PeerGateway._sendSingleRequest (/home/sabbir/PROJECTS/working_with_explorer/water_sensor_ranking_in_privet_block_chain/caliper-workspace/node_modules/@hyperledger/caliper-fabric/lib/connector-versions/peer-gateway/PeerGateway.js:141:23)
+    at PeerGateway.sendRequests (/home/sabbir/PROJECTS/working_with_explorer/water_sensor_ranking_in_privet_block_chain/caliper-workspace/node_modules/@hyperledger/caliper-core/lib/common/core/connector-base.js:83:37)
+    at AddSensorReadingsWorkload.submitTransaction (/home/sabbir/PROJECTS/working_with_explorer/water_sensor_ranking_in_privet_block_chain/caliper-workspace/benchmarks/workload/addSensorReadings.js:67:31)
+    at /home/sabbir/PROJECTS/working_with_explorer/water_sensor_ranking_in_privet_block_chain/caliper-workspace/node_modules/@hyperledger/caliper-core/lib/worker/caliper-worker.js:97:32
+    at Immediate.<anonymous> (/home/sabbir/PROJECTS/working_with_explorer/water_sensor_ranking_in_privet_block_chain/caliper-workspace/node_modules/@hyperledger/caliper-core/lib/worker/caliper-worker.js:74:17)
+    at process.processImmediate (node:internal/timers:476:21)
+2025.11.09-21:29:52.284[31m error[39m [caliper] [connector-base] 	Unexpected error while sending request: Error: Could not find details for contract ID SensorContract
+    at PeerGateway._sendSingleRequest (/home/sabbir/PROJECTS/working_with_explorer/water_sensor_ranking_in_privet_block_chain/caliper-workspace/node_modules/@hyperledger/caliper-fabric/lib/connector-versions/peer-gateway/PeerGateway.js:141:23)
+    at PeerGateway.sendRequests (/home/sabbir/PROJECTS/working_with_explorer/water_sensor_ranking_in_privet_block_chain/caliper-workspace/node_modules/@hyperledger/caliper-core/lib/common/core/connector-base.js:83:37)
+    at AddSensorReadingsWorkload.submitTransaction (/home/sabbir/PROJECTS/working_with_explorer/water_sensor_ranking_in_privet_block_chain/caliper-workspace/benchmarks/workload/addSensorReadings.js:67:31)
+    at /home/sabbir/PROJECTS/working_with_explorer/water_sensor_ranking_in_privet_block_chain/caliper-workspace/node_modules/@hyperledger/caliper-core/lib/worker/caliper-worker.js:97:32
+    at Immediate.<anonymous> (/home/sabbir/PROJECTS/working_with_explorer/water_sensor_ranking_in_privet_block_chain/caliper-workspace/node_modules/@hyperledger/caliper-core/lib/worker/caliper-worker.js:74:17)
+    at process.processImmediate (node:internal/timers:476:21)
+2025.11.09-21:29:52.284[31m error[39m [caliper] [caliper-worker] 	Unexpected error in worker #0 caused worker to finish round #0: Error: Could not find details for contract ID SensorContract
+    at PeerGateway._sendSingleRequest (/home/sabbir/PROJECTS/working_with_explorer/water_sensor_ranking_in_privet_block_chain/caliper-workspace/node_modules/@hyperledger/caliper-fabric/lib/connector-versions/peer-gateway/PeerGateway.js:141:23)
+    at PeerGateway.sendRequests (/home/sabbir/PROJECTS/working_with_explorer/water_sensor_ranking_in_privet_block_chain/caliper-workspace/node_modules/@hyperledger/caliper-core/lib/common/core/connector-base.js:83:37)
+    at AddSensorReadingsWorkload.submitTransaction (/home/sabbir/PROJECTS/working_with_explorer/water_sensor_ranking_in_privet_block_chain/caliper-workspace/benchmarks/workload/addSensorReadings.js:67:31)
+    at /home/sabbir/PROJECTS/working_with_explorer/water_sensor_ranking_in_privet_block_chain/caliper-workspace/node_modules/@hyperledger/caliper-core/lib/worker/caliper-worker.js:97:32
+    at Immediate.<anonymous> (/home/sabbir/PROJECTS/working_with_explorer/water_sensor_ranking_in_privet_block_chain/caliper-workspace/node_modules/@hyperledger/caliper-core/lib/worker/caliper-worker.js:74:17)
+    at process.processImmediate (node:internal/timers:476:21)
+2025.11.09-21:29:53.285[32m info [39m [caliper] [connectors/peer-gateway/PeerGateway] 	disconnecting gateway for user User1
+2025.11.09-21:29:53.285[32m info [39m [caliper] [connectors/peer-gateway/PeerGateway] 	disconnecting gRpc client at peer peer0.org1.example.com
+2025.11.09-21:29:53.286[31m error[39m [caliper] [worker-message-handler] 	Error while handling "test" message for Worker#1 (86404): Error: Could not find details for contract ID SensorContract
+    at PeerGateway._sendSingleRequest (/home/sabbir/PROJECTS/working_with_explorer/water_sensor_ranking_in_privet_block_chain/caliper-workspace/node_modules/@hyperledger/caliper-fabric/lib/connector-versions/peer-gateway/PeerGateway.js:141:23)
+    at PeerGateway.sendRequests (/home/sabbir/PROJECTS/working_with_explorer/water_sensor_ranking_in_privet_block_chain/caliper-workspace/node_modules/@hyperledger/caliper-core/lib/common/core/connector-base.js:83:37)
+    at AddSensorReadingsWorkload.submitTransaction (/home/sabbir/PROJECTS/working_with_explorer/water_sensor_ranking_in_privet_block_chain/caliper-workspace/benchmarks/workload/addSensorReadings.js:67:31)
+    at /home/sabbir/PROJECTS/working_with_explorer/water_sensor_ranking_in_privet_block_chain/caliper-workspace/node_modules/@hyperledger/caliper-core/lib/worker/caliper-worker.js:97:32
+    at Immediate.<anonymous> (/home/sabbir/PROJECTS/working_with_explorer/water_sensor_ranking_in_privet_block_chain/caliper-workspace/node_modules/@hyperledger/caliper-core/lib/worker/caliper-worker.js:74:17)
+    at process.processImmediate (node:internal/timers:476:21)
+2025.11.09-21:29:53.287[32m info [39m [caliper] [connectors/peer-gateway/PeerGateway] 	disconnecting gateway for user User1
+2025.11.09-21:29:53.288[32m info [39m [caliper] [connectors/peer-gateway/PeerGateway] 	disconnecting gRpc client at peer peer0.org1.example.com
+2025.11.09-21:29:53.289[31m error[39m [caliper] [worker-message-handler] 	Error while handling "test" message for Worker (86403): Error: Could not find details for contract ID SensorContract
+    at PeerGateway._sendSingleRequest (/home/sabbir/PROJECTS/working_with_explorer/water_sensor_ranking_in_privet_block_chain/caliper-workspace/node_modules/@hyperledger/caliper-fabric/lib/connector-versions/peer-gateway/PeerGateway.js:141:23)
+    at PeerGateway.sendRequests (/home/sabbir/PROJECTS/working_with_explorer/water_sensor_ranking_in_privet_block_chain/caliper-workspace/node_modules/@hyperledger/caliper-core/lib/common/core/connector-base.js:83:37)
+    at AddSensorReadingsWorkload.submitTransaction (/home/sabbir/PROJECTS/working_with_explorer/water_sensor_ranking_in_privet_block_chain/caliper-workspace/benchmarks/workload/addSensorReadings.js:67:31)
+    at /home/sabbir/PROJECTS/working_with_explorer/water_sensor_ranking_in_privet_block_chain/caliper-workspace/node_modules/@hyperledger/caliper-core/lib/worker/caliper-worker.js:97:32
+    at Immediate.<anonymous> (/home/sabbir/PROJECTS/working_with_explorer/water_sensor_ranking_in_privet_block_chain/caliper-workspace/node_modules/@hyperledger/caliper-core/lib/worker/caliper-worker.js:74:17)
+    at process.processImmediate (node:internal/timers:476:21)
+2025.11.09-21:29:58.294[32m info [39m [caliper] [default-observer] 	Resetting txCount indicator count
+2025.11.09-21:29:58.295[31m error[39m [caliper] [round-orchestrator] 	Failed round 1 (addBatchSensorReadings-round1): Error: Error: Could not find details for contract ID SensorContract
+    at WorkerOrchestrator.updateWorkerPhase (/home/sabbir/PROJECTS/working_with_explorer/water_sensor_ranking_in_privet_block_chain/caliper-workspace/node_modules/@hyperledger/caliper-core/lib/manager/orchestrators/worker-orchestrator.js:315:61)
+    at ProcessMessenger.<anonymous> (/home/sabbir/PROJECTS/working_with_explorer/water_sensor_ranking_in_privet_block_chain/caliper-workspace/node_modules/@hyperledger/caliper-core/lib/manager/orchestrators/worker-orchestrator.js:120:18)
+    at ProcessMessenger.emit (node:events:517:28)
+    at ProcessMessenger.onMessage (/home/sabbir/PROJECTS/working_with_explorer/water_sensor_ranking_in_privet_block_chain/caliper-workspace/node_modules/@hyperledger/caliper-core/lib/common/messengers/messenger-interface.js:40:14)
+    at ChildProcess.<anonymous> (/home/sabbir/PROJECTS/working_with_explorer/water_sensor_ranking_in_privet_block_chain/caliper-workspace/node_modules/@hyperledger/caliper-core/lib/common/messengers/process/process-messenger.js:59:26)
+    at ChildProcess.emit (node:events:517:28)
+    at emit (node:internal/child_process:944:14)
+    at process.processTicksAndRejections (node:internal/process/task_queues:83:21)
+2025.11.09-21:29:58.295[32m info [39m [caliper] [round-orchestrator] 	Started round 2 (addBatchSensorReadings-round2)
+2025.11.09-21:29:58.297[32m info [39m [caliper] [worker-message-handler] 	Preparing Worker#1 for Round#1
+2025.11.09-21:29:58.297[32m info [39m [caliper] [worker-message-handler] 	Preparing Worker#0 for Round#1
+2025.11.09-21:29:58.300[32m info [39m [caliper] [connectors/peer-gateway/PeerGateway] 	Generating contract map for user User1
+2025.11.09-21:29:58.300[32m info [39m [caliper] [caliper-worker] 	Info: worker 1 prepare test phase for round 1 is starting...
+2025.11.09-21:29:58.301[32m info [39m [caliper] [connectors/peer-gateway/PeerGateway] 	Generating contract map for user User1
+2025.11.09-21:29:58.301[32m info [39m [caliper] [caliper-worker] 	Info: worker 0 prepare test phase for round 1 is starting...
+2025.11.09-21:29:58.302[32m info [39m [caliper] [connectors/peer-gateway/PeerGateway] 	disconnecting gateway for user User1
+2025.11.09-21:29:58.302[32m info [39m [caliper] [connectors/peer-gateway/PeerGateway] 	disconnecting gRpc client at peer peer0.org1.example.com
+2025.11.09-21:29:58.302[32m info [39m [caliper] [caliper-worker] 	Info: worker 1 prepare test phase for round 1 is completed
+2025.11.09-21:29:58.302[32m info [39m [caliper] [worker-message-handler] 	Worker#1 prepared for Round#1
+2025.11.09-21:29:58.302[32m info [39m [caliper] [connectors/peer-gateway/PeerGateway] 	disconnecting gateway for user User1
+2025.11.09-21:29:58.302[32m info [39m [caliper] [connectors/peer-gateway/PeerGateway] 	disconnecting gRpc client at peer peer0.org1.example.com
+2025.11.09-21:29:58.302[32m info [39m [caliper] [caliper-worker] 	Info: worker 0 prepare test phase for round 1 is completed
+2025.11.09-21:29:58.303[32m info [39m [caliper] [worker-message-handler] 	Worker#0 prepared for Round#1
+2025.11.09-21:29:58.303[32m info [39m [caliper] [worker-orchestrator] 	2 workers prepared, progressing to test phase.
+2025.11.09-21:29:58.303[32m info [39m [caliper] [round-orchestrator] 	Monitors successfully started
+2025.11.09-21:29:58.304[32m info [39m [caliper] [worker-message-handler] 	Worker#1 is starting Round#1
+2025.11.09-21:29:58.304[32m info [39m [caliper] [worker-message-handler] 	Worker#0 is starting Round#1
+2025.11.09-21:29:58.306[32m info [39m [caliper] [connectors/peer-gateway/PeerGateway] 	Generating contract map for user User1
+2025.11.09-21:29:58.307[32m info [39m [caliper] [caliper-worker] 	Worker #0 starting workload loop
+2025.11.09-21:29:58.307[32m info [39m [caliper] [connectors/peer-gateway/PeerGateway] 	Generating contract map for user User1
+2025.11.09-21:29:58.308[31m error[39m [caliper] [connector-base] 	Unexpected error while sending request: Error: Could not find details for contract ID SensorContract
+    at PeerGateway._sendSingleRequest (/home/sabbir/PROJECTS/working_with_explorer/water_sensor_ranking_in_privet_block_chain/caliper-workspace/node_modules/@hyperledger/caliper-fabric/lib/connector-versions/peer-gateway/PeerGateway.js:141:23)
+    at PeerGateway.sendRequests (/home/sabbir/PROJECTS/working_with_explorer/water_sensor_ranking_in_privet_block_chain/caliper-workspace/node_modules/@hyperledger/caliper-core/lib/common/core/connector-base.js:83:37)
+    at AddSensorReadingsWorkload.submitTransaction (/home/sabbir/PROJECTS/working_with_explorer/water_sensor_ranking_in_privet_block_chain/caliper-workspace/benchmarks/workload/addSensorReadings.js:67:31)
+    at /home/sabbir/PROJECTS/working_with_explorer/water_sensor_ranking_in_privet_block_chain/caliper-workspace/node_modules/@hyperledger/caliper-core/lib/worker/caliper-worker.js:97:32
+    at Immediate.<anonymous> (/home/sabbir/PROJECTS/working_with_explorer/water_sensor_ranking_in_privet_block_chain/caliper-workspace/node_modules/@hyperledger/caliper-core/lib/worker/caliper-worker.js:74:17)
+    at process.processImmediate (node:internal/timers:476:21)
+2025.11.09-21:29:58.309[32m info [39m [caliper] [caliper-worker] 	Worker #1 starting workload loop
+2025.11.09-21:29:58.310[31m error[39m [caliper] [connector-base] 	Unexpected error while sending request: Error: Could not find details for contract ID SensorContract
+    at PeerGateway._sendSingleRequest (/home/sabbir/PROJECTS/working_with_explorer/water_sensor_ranking_in_privet_block_chain/caliper-workspace/node_modules/@hyperledger/caliper-fabric/lib/connector-versions/peer-gateway/PeerGateway.js:141:23)
+    at PeerGateway.sendRequests (/home/sabbir/PROJECTS/working_with_explorer/water_sensor_ranking_in_privet_block_chain/caliper-workspace/node_modules/@hyperledger/caliper-core/lib/common/core/connector-base.js:83:37)
+    at AddSensorReadingsWorkload.submitTransaction (/home/sabbir/PROJECTS/working_with_explorer/water_sensor_ranking_in_privet_block_chain/caliper-workspace/benchmarks/workload/addSensorReadings.js:67:31)
+    at /home/sabbir/PROJECTS/working_with_explorer/water_sensor_ranking_in_privet_block_chain/caliper-workspace/node_modules/@hyperledger/caliper-core/lib/worker/caliper-worker.js:97:32
+    at Immediate.<anonymous> (/home/sabbir/PROJECTS/working_with_explorer/water_sensor_ranking_in_privet_block_chain/caliper-workspace/node_modules/@hyperledger/caliper-core/lib/worker/caliper-worker.js:74:17)
+    at process.processImmediate (node:internal/timers:476:21)
+2025.11.09-21:29:58.351[31m error[39m [caliper] [connector-base] 	Unexpected error while sending request: Error: Could not find details for contract ID SensorContract
+    at PeerGateway._sendSingleRequest (/home/sabbir/PROJECTS/working_with_explorer/water_sensor_ranking_in_privet_block_chain/caliper-workspace/node_modules/@hyperledger/caliper-fabric/lib/connector-versions/peer-gateway/PeerGateway.js:141:23)
+    at PeerGateway.sendRequests (/home/sabbir/PROJECTS/working_with_explorer/water_sensor_ranking_in_privet_block_chain/caliper-workspace/node_modules/@hyperledger/caliper-core/lib/common/core/connector-base.js:83:37)
+    at AddSensorReadingsWorkload.submitTransaction (/home/sabbir/PROJECTS/working_with_explorer/water_sensor_ranking_in_privet_block_chain/caliper-workspace/benchmarks/workload/addSensorReadings.js:67:31)
+    at /home/sabbir/PROJECTS/working_with_explorer/water_sensor_ranking_in_privet_block_chain/caliper-workspace/node_modules/@hyperledger/caliper-core/lib/worker/caliper-worker.js:97:32
+    at Immediate.<anonymous> (/home/sabbir/PROJECTS/working_with_explorer/water_sensor_ranking_in_privet_block_chain/caliper-workspace/node_modules/@hyperledger/caliper-core/lib/worker/caliper-worker.js:74:17)
+    at process.processImmediate (node:internal/timers:476:21)
+2025.11.09-21:29:58.352[31m error[39m [caliper] [caliper-worker] 	Unexpected error in worker #1 caused worker to finish round #1: Error: Could not find details for contract ID SensorContract
+    at PeerGateway._sendSingleRequest (/home/sabbir/PROJECTS/working_with_explorer/water_sensor_ranking_in_privet_block_chain/caliper-workspace/node_modules/@hyperledger/caliper-fabric/lib/connector-versions/peer-gateway/PeerGateway.js:141:23)
+    at PeerGateway.sendRequests (/home/sabbir/PROJECTS/working_with_explorer/water_sensor_ranking_in_privet_block_chain/caliper-workspace/node_modules/@hyperledger/caliper-core/lib/common/core/connector-base.js:83:37)
+    at AddSensorReadingsWorkload.submitTransaction (/home/sabbir/PROJECTS/working_with_explorer/water_sensor_ranking_in_privet_block_chain/caliper-workspace/benchmarks/workload/addSensorReadings.js:67:31)
+    at /home/sabbir/PROJECTS/working_with_explorer/water_sensor_ranking_in_privet_block_chain/caliper-workspace/node_modules/@hyperledger/caliper-core/lib/worker/caliper-worker.js:97:32
+    at Immediate.<anonymous> (/home/sabbir/PROJECTS/working_with_explorer/water_sensor_ranking_in_privet_block_chain/caliper-workspace/node_modules/@hyperledger/caliper-core/lib/worker/caliper-worker.js:74:17)
+    at process.processImmediate (node:internal/timers:476:21)
+2025.11.09-21:29:58.361[31m error[39m [caliper] [connector-base] 	Unexpected error while sending request: Error: Could not find details for contract ID SensorContract
+    at PeerGateway._sendSingleRequest (/home/sabbir/PROJECTS/working_with_explorer/water_sensor_ranking_in_privet_block_chain/caliper-workspace/node_modules/@hyperledger/caliper-fabric/lib/connector-versions/peer-gateway/PeerGateway.js:141:23)
+    at PeerGateway.sendRequests (/home/sabbir/PROJECTS/working_with_explorer/water_sensor_ranking_in_privet_block_chain/caliper-workspace/node_modules/@hyperledger/caliper-core/lib/common/core/connector-base.js:83:37)
+    at AddSensorReadingsWorkload.submitTransaction (/home/sabbir/PROJECTS/working_with_explorer/water_sensor_ranking_in_privet_block_chain/caliper-workspace/benchmarks/workload/addSensorReadings.js:67:31)
+    at /home/sabbir/PROJECTS/working_with_explorer/water_sensor_ranking_in_privet_block_chain/caliper-workspace/node_modules/@hyperledger/caliper-core/lib/worker/caliper-worker.js:97:32
+    at Immediate.<anonymous> (/home/sabbir/PROJECTS/working_with_explorer/water_sensor_ranking_in_privet_block_chain/caliper-workspace/node_modules/@hyperledger/caliper-core/lib/worker/caliper-worker.js:74:17)
+    at process.processImmediate (node:internal/timers:476:21)
+2025.11.09-21:29:58.362[31m error[39m [caliper] [caliper-worker] 	Unexpected error in worker #0 caused worker to finish round #1: Error: Could not find details for contract ID SensorContract
+    at PeerGateway._sendSingleRequest (/home/sabbir/PROJECTS/working_with_explorer/water_sensor_ranking_in_privet_block_chain/caliper-workspace/node_modules/@hyperledger/caliper-fabric/lib/connector-versions/peer-gateway/PeerGateway.js:141:23)
+    at PeerGateway.sendRequests (/home/sabbir/PROJECTS/working_with_explorer/water_sensor_ranking_in_privet_block_chain/caliper-workspace/node_modules/@hyperledger/caliper-core/lib/common/core/connector-base.js:83:37)
+    at AddSensorReadingsWorkload.submitTransaction (/home/sabbir/PROJECTS/working_with_explorer/water_sensor_ranking_in_privet_block_chain/caliper-workspace/benchmarks/workload/addSensorReadings.js:67:31)
+    at /home/sabbir/PROJECTS/working_with_explorer/water_sensor_ranking_in_privet_block_chain/caliper-workspace/node_modules/@hyperledger/caliper-core/lib/worker/caliper-worker.js:97:32
+    at Immediate.<anonymous> (/home/sabbir/PROJECTS/working_with_explorer/water_sensor_ranking_in_privet_block_chain/caliper-workspace/node_modules/@hyperledger/caliper-core/lib/worker/caliper-worker.js:74:17)
+    at process.processImmediate (node:internal/timers:476:21)
+2025.11.09-21:29:59.354[32m info [39m [caliper] [connectors/peer-gateway/PeerGateway] 	disconnecting gateway for user User1
+2025.11.09-21:29:59.354[32m info [39m [caliper] [connectors/peer-gateway/PeerGateway] 	disconnecting gRpc client at peer peer0.org1.example.com
+2025.11.09-21:29:59.354[31m error[39m [caliper] [worker-message-handler] 	Error while handling "test" message for Worker#1 (86404): Error: Could not find details for contract ID SensorContract
+    at PeerGateway._sendSingleRequest (/home/sabbir/PROJECTS/working_with_explorer/water_sensor_ranking_in_privet_block_chain/caliper-workspace/node_modules/@hyperledger/caliper-fabric/lib/connector-versions/peer-gateway/PeerGateway.js:141:23)
+    at PeerGateway.sendRequests (/home/sabbir/PROJECTS/working_with_explorer/water_sensor_ranking_in_privet_block_chain/caliper-workspace/node_modules/@hyperledger/caliper-core/lib/common/core/connector-base.js:83:37)
+    at AddSensorReadingsWorkload.submitTransaction (/home/sabbir/PROJECTS/working_with_explorer/water_sensor_ranking_in_privet_block_chain/caliper-workspace/benchmarks/workload/addSensorReadings.js:67:31)
+    at /home/sabbir/PROJECTS/working_with_explorer/water_sensor_ranking_in_privet_block_chain/caliper-workspace/node_modules/@hyperledger/caliper-core/lib/worker/caliper-worker.js:97:32
+    at Immediate.<anonymous> (/home/sabbir/PROJECTS/working_with_explorer/water_sensor_ranking_in_privet_block_chain/caliper-workspace/node_modules/@hyperledger/caliper-core/lib/worker/caliper-worker.js:74:17)
+    at process.processImmediate (node:internal/timers:476:21)
+2025.11.09-21:29:59.364[32m info [39m [caliper] [connectors/peer-gateway/PeerGateway] 	disconnecting gateway for user User1
+2025.11.09-21:29:59.364[32m info [39m [caliper] [connectors/peer-gateway/PeerGateway] 	disconnecting gRpc client at peer peer0.org1.example.com
+2025.11.09-21:29:59.365[31m error[39m [caliper] [worker-message-handler] 	Error while handling "test" message for Worker (86403): Error: Could not find details for contract ID SensorContract
+    at PeerGateway._sendSingleRequest (/home/sabbir/PROJECTS/working_with_explorer/water_sensor_ranking_in_privet_block_chain/caliper-workspace/node_modules/@hyperledger/caliper-fabric/lib/connector-versions/peer-gateway/PeerGateway.js:141:23)
+    at PeerGateway.sendRequests (/home/sabbir/PROJECTS/working_with_explorer/water_sensor_ranking_in_privet_block_chain/caliper-workspace/node_modules/@hyperledger/caliper-core/lib/common/core/connector-base.js:83:37)
+    at AddSensorReadingsWorkload.submitTransaction (/home/sabbir/PROJECTS/working_with_explorer/water_sensor_ranking_in_privet_block_chain/caliper-workspace/benchmarks/workload/addSensorReadings.js:67:31)
+    at /home/sabbir/PROJECTS/working_with_explorer/water_sensor_ranking_in_privet_block_chain/caliper-workspace/node_modules/@hyperledger/caliper-core/lib/worker/caliper-worker.js:97:32
+    at Immediate.<anonymous> (/home/sabbir/PROJECTS/working_with_explorer/water_sensor_ranking_in_privet_block_chain/caliper-workspace/node_modules/@hyperledger/caliper-core/lib/worker/caliper-worker.js:74:17)
+    at process.processImmediate (node:internal/timers:476:21)
+2025.11.09-21:30:04.356[32m info [39m [caliper] [default-observer] 	Resetting txCount indicator count
+2025.11.09-21:30:04.357[31m error[39m [caliper] [round-orchestrator] 	Failed round 2 (addBatchSensorReadings-round2): Error: Error: Could not find details for contract ID SensorContract
+    at WorkerOrchestrator.updateWorkerPhase (/home/sabbir/PROJECTS/working_with_explorer/water_sensor_ranking_in_privet_block_chain/caliper-workspace/node_modules/@hyperledger/caliper-core/lib/manager/orchestrators/worker-orchestrator.js:315:61)
+    at ProcessMessenger.<anonymous> (/home/sabbir/PROJECTS/working_with_explorer/water_sensor_ranking_in_privet_block_chain/caliper-workspace/node_modules/@hyperledger/caliper-core/lib/manager/orchestrators/worker-orchestrator.js:120:18)
+    at ProcessMessenger.emit (node:events:517:28)
+    at ProcessMessenger.onMessage (/home/sabbir/PROJECTS/working_with_explorer/water_sensor_ranking_in_privet_block_chain/caliper-workspace/node_modules/@hyperledger/caliper-core/lib/common/messengers/messenger-interface.js:40:14)
+    at ChildProcess.<anonymous> (/home/sabbir/PROJECTS/working_with_explorer/water_sensor_ranking_in_privet_block_chain/caliper-workspace/node_modules/@hyperledger/caliper-core/lib/common/messengers/process/process-messenger.js:59:26)
+    at ChildProcess.emit (node:events:517:28)
+    at emit (node:internal/child_process:944:14)
+    at process.processTicksAndRejections (node:internal/process/task_queues:83:21)
+2025.11.09-21:30:04.358[32m info [39m [caliper] [report-builder] 	### All test results ###
+2025.11.09-21:30:04.358[31m error[39m [caliper] [report-builder] 	No data within test result; implies error within configuration files
+2025.11.09-21:30:04.358[31m error[39m [caliper] [round-orchestrator] 	Error while finalizing the report: Error: unrecognized report table
+    at ReportBuilder.setSummaryTable (/home/sabbir/PROJECTS/working_with_explorer/water_sensor_ranking_in_privet_block_chain/caliper-workspace/node_modules/@hyperledger/caliper-core/lib/manager/report/report-builder.js:142:19)
+    at Report.printResultsByRound (/home/sabbir/PROJECTS/working_with_explorer/water_sensor_ranking_in_privet_block_chain/caliper-workspace/node_modules/@hyperledger/caliper-core/lib/manager/report/report.js:182:28)
+    at RoundOrchestrator.run (/home/sabbir/PROJECTS/working_with_explorer/water_sensor_ranking_in_privet_block_chain/caliper-workspace/node_modules/@hyperledger/caliper-core/lib/manager/orchestrators/round-orchestrator.js:229:25)
+    at async CaliperEngine.run (/home/sabbir/PROJECTS/working_with_explorer/water_sensor_ranking_in_privet_block_chain/caliper-workspace/node_modules/@hyperledger/caliper-core/lib/manager/caliper-engine.js:153:17)
+    at async LaunchManager.handler (/home/sabbir/PROJECTS/working_with_explorer/water_sensor_ranking_in_privet_block_chain/caliper-workspace/node_modules/@hyperledger/caliper-cli/lib/launch/lib/launchManager.js:81:30)
+2025.11.09-21:30:04.359[32m info [39m [caliper] [monitor.js] 	Stopping all monitors
+2025.11.09-21:30:04.460[32m info [39m [caliper] [worker-orchestrator] 	Sending exit message to connected workers
+2025.11.09-21:30:04.461[32m info [39m [caliper] [round-orchestrator] 	Benchmark finished in 14.305 seconds. Total rounds: 2. Successful rounds: 0. Failed rounds: 2.
+2025.11.09-21:30:04.461[32m info [39m [caliper] [caliper-engine] 	Network configuration attribute "caliper.command.end" is not present, skipping end command
+2025.11.09-21:30:04.461[32m info [39m [caliper] [cli-launch-manager] 	Benchmark successfully finished!
+2025.11.09-21:30:04.461[32m info [39m [caliper] [worker-message-handler] 	Worker#0 is exiting
+2025.11.09-21:30:04.461[32m info [39m [caliper] [worker-message-handler] 	Worker#1 is exiting

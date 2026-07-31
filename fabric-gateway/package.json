@@ -1,0 +1,28 @@
+{
+  "name": "fpaif-fabric-gateway",
+  "version": "1.0.0",
+  "description": "REST gateway for FPAIF to Hyperledger Fabric integration",
+  "main": "gateway.js",
+  "scripts": {
+    "start": "node gateway.js",
+    "dev": "nodemon gateway.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "fabric",
+    "gateway",
+    "rest-api",
+    "express"
+  ],
+  "author": "FPAIF Team",
+  "license": "Apache-2.0",
+  "dependencies": {
+    "express": "^4.18.2",
+    "@hyperledger/fabric-gateway": "^1.4.1",
+    "@grpc/grpc-js": "^1.10.3",
+    "dotenv": "^16.0.3"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.1"
+  }
+}

@@ -1,0 +1,22 @@
+# Dependency directories (at all levels)
+**/node_modules/
+node_modules/
+package-lock.json
+yarn.lock
+# Binary files and directories (at all levels)
+**/bin/
+bin/
+*.bin
+
+caliper-workspace/node_modules/
+
+# Python virtual environments (at all levels)
+**/.venv/
+**/venv/
+**/__pycache__/
+*.pyc
+
+# SQLite runtime databases
+**/*.db
+**/*.db-wal
+**/*.db-shm

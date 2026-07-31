@@ -1,0 +1,68 @@
+{
+  "auth_success_count": 80,
+  "auth_fail_count": 20,
+  "auth_success_rate": 80.0,
+  "auth_failure_rate": 20.0,
+  "auth_time_avg_ms": 2085.568,
+  "auth_time_min_ms": 2039.975,
+  "auth_time_max_ms": 2115.248,
+  "auth_time_median_ms": 2087.707,
+  "auth_time_p95_ms": 2108.182,
+  "authorized_access": 20,
+  "unauthorized_access": 20,
+  "auth_unauth_ratio": "20:20",
+  "unauthorized_rate": 50.0,
+  "ddos_total": 200,
+  "ddos_blocked": 0,
+  "ddos_allowed": 200,
+  "ddos_block_rate": 0.0,
+  "hijack_total": 50,
+  "hijack_denied": 50,
+  "hijack_denial_rate": 100.0,
+  "hijack_avg_detection_ms": 2050.404,
+  "log_time_avg_ms": 0.0018,
+  "log_time_min_ms": 0.0005,
+  "log_time_max_ms": 0.0296,
+  "big_agent_scenarios": [
+    {
+      "label": "Normal Agent",
+      "name_len": 15,
+      "avg_auth_ms": 2054.055
+    },
+    {
+      "label": "Medium Agent",
+      "name_len": 42,
+      "avg_auth_ms": 2056.572
+    },
+    {
+      "label": "Big Agent",
+      "name_len": 89,
+      "avg_auth_ms": 2057.661
+    },
+    {
+      "label": "Giant Agent",
+      "name_len": 161,
+      "avg_auth_ms": 2059.079
+    }
+  ],
+  "encryption_algo": "SHA256",
+  "credential_hash_len": 64,
+  "credential_hash_sample": "2301f68f9167caed...",
+  "load_users": 20,
+  "load_reg_success": 20,
+  "load_reg_fail": 0,
+  "load_reg_success_rate": 100.0,
+  "load_reg_throughput_rps": 8.4,
+  "load_reg_wall_sec": 2.38,
+  "load_reg_avg_ms": 2200.18,
+  "load_reg_min_ms": 2035.3,
+  "load_reg_max_ms": 2345.33,
+  "load_auth_success": 15,
+  "load_auth_fail": 5,
+  "load_auth_success_rate": 75.0,
+  "load_auth_throughput_rps": 8.1,
+  "load_auth_wall_sec": 2.47,
+  "load_auth_avg_ms": 2264.32,
+  "load_auth_min_ms": 2051.55,
+  "load_auth_max_ms": 2442.99
+}
