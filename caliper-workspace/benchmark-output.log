@@ -1,244 +1,369 @@
-2025.11.09-21:29:48.825[32m info [39m [caliper] [cli-launch-manager] 	Set workspace path: /home/sabbir/PROJECTS/working_with_explorer/water_sensor_ranking_in_privet_block_chain/caliper-workspace
-2025.11.09-21:29:48.826[32m info [39m [caliper] [cli-launch-manager] 	Set benchmark configuration path: /home/sabbir/PROJECTS/working_with_explorer/water_sensor_ranking_in_privet_block_chain/caliper-workspace/benchmarks/config.yaml
-2025.11.09-21:29:48.826[32m info [39m [caliper] [cli-launch-manager] 	Set network configuration path: /home/sabbir/PROJECTS/working_with_explorer/water_sensor_ranking_in_privet_block_chain/caliper-workspace/networks/fabric-network.yaml
-2025.11.09-21:29:48.826[32m info [39m [caliper] [cli-launch-manager] 	Set SUT type: fabric
-2025.11.09-21:29:48.830[32m info [39m [caliper] [benchmark-validator] 	No observer specified, will default to `none`
-2025.11.09-21:29:48.830[32m info [39m [caliper] [caliper-engine] 	Starting benchmark flow
-2025.11.09-21:29:48.831[32m info [39m [caliper] [caliper-engine] 	Network configuration attribute "caliper.command.start" is not present, skipping start command
-2025.11.09-21:29:49.280[32m info [39m [caliper] [FabricConnectorFactory] 	Initializing peer gateway connector compatible with installed fabric-gateway SDK: 1.5.0
-2025.11.09-21:29:49.289[32m info [39m [caliper] [IdentityManager] 	Adding User1 (admin=false) as User1 for organization Org1MSP
-2025.11.09-21:29:49.291[32m info [39m [caliper] [connectors/peer-gateway/PeerGateway] 	Fabric-Gateway SDK version: 1.5.0 for Peer-Gateway connector; TLS based on Org1MSP: server
-2025.11.09-21:29:49.291[32m info [39m [caliper] [caliper-engine] 	Executed "init" step in 0.001 seconds
-2025.11.09-21:29:49.292[33m warn [39m [caliper] [connectors/peer-gateway/PeerGateway] 	Install smart contract not available for the Fabric Peer Gateway connector
-2025.11.09-21:29:49.292[32m info [39m [caliper] [caliper-engine] 	Executed "install" step in 0.001 seconds
-2025.11.09-21:29:49.294[32m info [39m [caliper] [monitor.js] 	Attempting to create resource monitor of type docker
-2025.11.09-21:29:49.295[32m info [39m [caliper] [default-observer] 	Observer interval set to 5000 milliseconds
-2025.11.09-21:29:49.297[32m info [39m [caliper] [round-orchestrator] 	Preparing worker connections
-2025.11.09-21:29:49.298[32m info [39m [caliper] [worker-orchestrator] 	Launching worker 1 of 2
-2025.11.09-21:29:49.304[32m info [39m [caliper] [worker-orchestrator] 	Launching worker 2 of 2
-2025.11.09-21:29:49.310[32m info [39m [caliper] [worker-orchestrator] 	Messenger not configured, entering configure phase...
-2025.11.09-21:29:49.311[32m info [39m [caliper] [worker-orchestrator] 	No existing workers detected, entering worker launch phase...
-2025.11.09-21:29:49.311[32m info [39m [caliper] [worker-orchestrator] 	Waiting for 2 workers to be connected...
-2025.11.09-21:29:49.587[32m info [39m [caliper] [cli-launch-worker] 	Set workspace path: /home/sabbir/PROJECTS/working_with_explorer/water_sensor_ranking_in_privet_block_chain/caliper-workspace
-2025.11.09-21:29:49.589[32m info [39m [caliper] [cli-launch-worker] 	Set benchmark configuration path: /home/sabbir/PROJECTS/working_with_explorer/water_sensor_ranking_in_privet_block_chain/caliper-workspace/benchmarks/config.yaml
-2025.11.09-21:29:49.589[32m info [39m [caliper] [cli-launch-worker] 	Set network configuration path: /home/sabbir/PROJECTS/working_with_explorer/water_sensor_ranking_in_privet_block_chain/caliper-workspace/networks/fabric-network.yaml
-2025.11.09-21:29:49.589[32m info [39m [caliper] [cli-launch-worker] 	Set SUT type: fabric
-2025.11.09-21:29:49.599[32m info [39m [caliper] [cli-launch-worker] 	Set workspace path: /home/sabbir/PROJECTS/working_with_explorer/water_sensor_ranking_in_privet_block_chain/caliper-workspace
-2025.11.09-21:29:49.600[32m info [39m [caliper] [cli-launch-worker] 	Set benchmark configuration path: /home/sabbir/PROJECTS/working_with_explorer/water_sensor_ranking_in_privet_block_chain/caliper-workspace/benchmarks/config.yaml
-2025.11.09-21:29:49.600[32m info [39m [caliper] [cli-launch-worker] 	Set network configuration path: /home/sabbir/PROJECTS/working_with_explorer/water_sensor_ranking_in_privet_block_chain/caliper-workspace/networks/fabric-network.yaml
-2025.11.09-21:29:49.600[32m info [39m [caliper] [cli-launch-worker] 	Set SUT type: fabric
-2025.11.09-21:29:49.618[32m info [39m [caliper] [worker-orchestrator] 	2 workers connected, progressing to worker assignment phase.
-2025.11.09-21:29:49.618[32m info [39m [caliper] [worker-orchestrator] 	Workers currently unassigned, awaiting index assignment...
-2025.11.09-21:29:49.618[32m info [39m [caliper] [worker-orchestrator] 	Waiting for 2 workers to be assigned...
-2025.11.09-21:29:49.628[32m info [39m [caliper] [worker-orchestrator] 	2 workers assigned, progressing to worker initialization phase.
-2025.11.09-21:29:49.628[32m info [39m [caliper] [worker-orchestrator] 	Waiting for 2 workers to be ready...
-2025.11.09-21:29:49.629[32m info [39m [caliper] [worker-message-handler] 	Initializing Worker#0...
-2025.11.09-21:29:49.629[32m info [39m [caliper] [worker-message-handler] 	Initializing Worker#1...
-2025.11.09-21:29:50.128[32m info [39m [caliper] [FabricConnectorFactory] 	Initializing peer gateway connector compatible with installed fabric-gateway SDK: 1.5.0
-2025.11.09-21:29:50.141[32m info [39m [caliper] [FabricConnectorFactory] 	Initializing peer gateway connector compatible with installed fabric-gateway SDK: 1.5.0
-2025.11.09-21:29:50.141[32m info [39m [caliper] [IdentityManager] 	Adding User1 (admin=false) as User1 for organization Org1MSP
-2025.11.09-21:29:50.143[32m info [39m [caliper] [worker-message-handler] 	Worker#1 initialized
-2025.11.09-21:29:50.152[32m info [39m [caliper] [IdentityManager] 	Adding User1 (admin=false) as User1 for organization Org1MSP
-2025.11.09-21:29:50.155[32m info [39m [caliper] [worker-message-handler] 	Worker#0 initialized
-2025.11.09-21:29:50.156[32m info [39m [caliper] [worker-orchestrator] 	2 workers ready, progressing to test preparation phase.
-2025.11.09-21:29:50.156[32m info [39m [caliper] [round-orchestrator] 	Started round 1 (addBatchSensorReadings-round1)
-2025.11.09-21:29:50.157[32m info [39m [caliper] [worker-message-handler] 	Preparing Worker#0 for Round#0
-2025.11.09-21:29:50.157[32m info [39m [caliper] [worker-message-handler] 	Preparing Worker#1 for Round#0
-2025.11.09-21:29:50.184[32m info [39m [caliper] [connectors/peer-gateway/PeerGateway] 	Generating contract map for user User1
-2025.11.09-21:29:50.184[32m info [39m [caliper] [caliper-worker] 	Info: worker 0 prepare test phase for round 0 is starting...
-2025.11.09-21:29:50.185[32m info [39m [caliper] [connectors/peer-gateway/PeerGateway] 	Generating contract map for user User1
-2025.11.09-21:29:50.186[32m info [39m [caliper] [caliper-worker] 	Info: worker 1 prepare test phase for round 0 is starting...
-2025.11.09-21:29:50.186[32m info [39m [caliper] [connectors/peer-gateway/PeerGateway] 	disconnecting gateway for user User1
-2025.11.09-21:29:50.187[32m info [39m [caliper] [connectors/peer-gateway/PeerGateway] 	disconnecting gRpc client at peer peer0.org1.example.com
-2025.11.09-21:29:50.187[32m info [39m [caliper] [caliper-worker] 	Info: worker 0 prepare test phase for round 0 is completed
-2025.11.09-21:29:50.187[32m info [39m [caliper] [worker-message-handler] 	Worker#0 prepared for Round#0
-2025.11.09-21:29:50.187[32m info [39m [caliper] [connectors/peer-gateway/PeerGateway] 	disconnecting gateway for user User1
-2025.11.09-21:29:50.188[32m info [39m [caliper] [connectors/peer-gateway/PeerGateway] 	disconnecting gRpc client at peer peer0.org1.example.com
-2025.11.09-21:29:50.188[32m info [39m [caliper] [caliper-worker] 	Info: worker 1 prepare test phase for round 0 is completed
-2025.11.09-21:29:50.188[32m info [39m [caliper] [worker-message-handler] 	Worker#1 prepared for Round#0
-2025.11.09-21:29:50.189[32m info [39m [caliper] [worker-orchestrator] 	2 workers prepared, progressing to test phase.
-2025.11.09-21:29:52.238[32m info [39m [caliper] [round-orchestrator] 	Monitors successfully started
-2025.11.09-21:29:52.240[32m info [39m [caliper] [worker-message-handler] 	Worker#0 is starting Round#0
-2025.11.09-21:29:52.240[32m info [39m [caliper] [worker-message-handler] 	Worker#1 is starting Round#0
-2025.11.09-21:29:52.242[32m info [39m [caliper] [connectors/peer-gateway/PeerGateway] 	Generating contract map for user User1
-2025.11.09-21:29:52.243[32m info [39m [caliper] [connectors/peer-gateway/PeerGateway] 	Generating contract map for user User1
-2025.11.09-21:29:52.244[32m info [39m [caliper] [caliper-worker] 	Worker #0 starting workload loop
-2025.11.09-21:29:52.245[32m info [39m [caliper] [caliper-worker] 	Worker #1 starting workload loop
-2025.11.09-21:29:52.246[31m error[39m [caliper] [connector-base] 	Unexpected error while sending request: Error: Could not find details for contract ID SensorContract
-    at PeerGateway._sendSingleRequest (/home/sabbir/PROJECTS/working_with_explorer/water_sensor_ranking_in_privet_block_chain/caliper-workspace/node_modules/@hyperledger/caliper-fabric/lib/connector-versions/peer-gateway/PeerGateway.js:141:23)
-    at PeerGateway.sendRequests (/home/sabbir/PROJECTS/working_with_explorer/water_sensor_ranking_in_privet_block_chain/caliper-workspace/node_modules/@hyperledger/caliper-core/lib/common/core/connector-base.js:83:37)
-    at AddSensorReadingsWorkload.submitTransaction (/home/sabbir/PROJECTS/working_with_explorer/water_sensor_ranking_in_privet_block_chain/caliper-workspace/benchmarks/workload/addSensorReadings.js:67:31)
-    at /home/sabbir/PROJECTS/working_with_explorer/water_sensor_ranking_in_privet_block_chain/caliper-workspace/node_modules/@hyperledger/caliper-core/lib/worker/caliper-worker.js:97:32
-    at Immediate.<anonymous> (/home/sabbir/PROJECTS/working_with_explorer/water_sensor_ranking_in_privet_block_chain/caliper-workspace/node_modules/@hyperledger/caliper-core/lib/worker/caliper-worker.js:74:17)
-    at process.processImmediate (node:internal/timers:476:21)
-2025.11.09-21:29:52.247[31m error[39m [caliper] [connector-base] 	Unexpected error while sending request: Error: Could not find details for contract ID SensorContract
-    at PeerGateway._sendSingleRequest (/home/sabbir/PROJECTS/working_with_explorer/water_sensor_ranking_in_privet_block_chain/caliper-workspace/node_modules/@hyperledger/caliper-fabric/lib/connector-versions/peer-gateway/PeerGateway.js:141:23)
-    at PeerGateway.sendRequests (/home/sabbir/PROJECTS/working_with_explorer/water_sensor_ranking_in_privet_block_chain/caliper-workspace/node_modules/@hyperledger/caliper-core/lib/common/core/connector-base.js:83:37)
-    at AddSensorReadingsWorkload.submitTransaction (/home/sabbir/PROJECTS/working_with_explorer/water_sensor_ranking_in_privet_block_chain/caliper-workspace/benchmarks/workload/addSensorReadings.js:67:31)
-    at /home/sabbir/PROJECTS/working_with_explorer/water_sensor_ranking_in_privet_block_chain/caliper-workspace/node_modules/@hyperledger/caliper-core/lib/worker/caliper-worker.js:97:32
-    at Immediate.<anonymous> (/home/sabbir/PROJECTS/working_with_explorer/water_sensor_ranking_in_privet_block_chain/caliper-workspace/node_modules/@hyperledger/caliper-core/lib/worker/caliper-worker.js:74:17)
-    at process.processImmediate (node:internal/timers:476:21)
-2025.11.09-21:29:52.283[31m error[39m [caliper] [connector-base] 	Unexpected error while sending request: Error: Could not find details for contract ID SensorContract
-    at PeerGateway._sendSingleRequest (/home/sabbir/PROJECTS/working_with_explorer/water_sensor_ranking_in_privet_block_chain/caliper-workspace/node_modules/@hyperledger/caliper-fabric/lib/connector-versions/peer-gateway/PeerGateway.js:141:23)
-    at PeerGateway.sendRequests (/home/sabbir/PROJECTS/working_with_explorer/water_sensor_ranking_in_privet_block_chain/caliper-workspace/node_modules/@hyperledger/caliper-core/lib/common/core/connector-base.js:83:37)
-    at AddSensorReadingsWorkload.submitTransaction (/home/sabbir/PROJECTS/working_with_explorer/water_sensor_ranking_in_privet_block_chain/caliper-workspace/benchmarks/workload/addSensorReadings.js:67:31)
-    at /home/sabbir/PROJECTS/working_with_explorer/water_sensor_ranking_in_privet_block_chain/caliper-workspace/node_modules/@hyperledger/caliper-core/lib/worker/caliper-worker.js:97:32
-    at Immediate.<anonymous> (/home/sabbir/PROJECTS/working_with_explorer/water_sensor_ranking_in_privet_block_chain/caliper-workspace/node_modules/@hyperledger/caliper-core/lib/worker/caliper-worker.js:74:17)
-    at process.processImmediate (node:internal/timers:476:21)
-2025.11.09-21:29:52.284[31m error[39m [caliper] [caliper-worker] 	Unexpected error in worker #1 caused worker to finish round #0: Error: Could not find details for contract ID SensorContract
-    at PeerGateway._sendSingleRequest (/home/sabbir/PROJECTS/working_with_explorer/water_sensor_ranking_in_privet_block_chain/caliper-workspace/node_modules/@hyperledger/caliper-fabric/lib/connector-versions/peer-gateway/PeerGateway.js:141:23)
-    at PeerGateway.sendRequests (/home/sabbir/PROJECTS/working_with_explorer/water_sensor_ranking_in_privet_block_chain/caliper-workspace/node_modules/@hyperledger/caliper-core/lib/common/core/connector-base.js:83:37)
-    at AddSensorReadingsWorkload.submitTransaction (/home/sabbir/PROJECTS/working_with_explorer/water_sensor_ranking_in_privet_block_chain/caliper-workspace/benchmarks/workload/addSensorReadings.js:67:31)
-    at /home/sabbir/PROJECTS/working_with_explorer/water_sensor_ranking_in_privet_block_chain/caliper-workspace/node_modules/@hyperledger/caliper-core/lib/worker/caliper-worker.js:97:32
-    at Immediate.<anonymous> (/home/sabbir/PROJECTS/working_with_explorer/water_sensor_ranking_in_privet_block_chain/caliper-workspace/node_modules/@hyperledger/caliper-core/lib/worker/caliper-worker.js:74:17)
-    at process.processImmediate (node:internal/timers:476:21)
-2025.11.09-21:29:52.284[31m error[39m [caliper] [connector-base] 	Unexpected error while sending request: Error: Could not find details for contract ID SensorContract
-    at PeerGateway._sendSingleRequest (/home/sabbir/PROJECTS/working_with_explorer/water_sensor_ranking_in_privet_block_chain/caliper-workspace/node_modules/@hyperledger/caliper-fabric/lib/connector-versions/peer-gateway/PeerGateway.js:141:23)
-    at PeerGateway.sendRequests (/home/sabbir/PROJECTS/working_with_explorer/water_sensor_ranking_in_privet_block_chain/caliper-workspace/node_modules/@hyperledger/caliper-core/lib/common/core/connector-base.js:83:37)
-    at AddSensorReadingsWorkload.submitTransaction (/home/sabbir/PROJECTS/working_with_explorer/water_sensor_ranking_in_privet_block_chain/caliper-workspace/benchmarks/workload/addSensorReadings.js:67:31)
-    at /home/sabbir/PROJECTS/working_with_explorer/water_sensor_ranking_in_privet_block_chain/caliper-workspace/node_modules/@hyperledger/caliper-core/lib/worker/caliper-worker.js:97:32
-    at Immediate.<anonymous> (/home/sabbir/PROJECTS/working_with_explorer/water_sensor_ranking_in_privet_block_chain/caliper-workspace/node_modules/@hyperledger/caliper-core/lib/worker/caliper-worker.js:74:17)
-    at process.processImmediate (node:internal/timers:476:21)
-2025.11.09-21:29:52.284[31m error[39m [caliper] [caliper-worker] 	Unexpected error in worker #0 caused worker to finish round #0: Error: Could not find details for contract ID SensorContract
-    at PeerGateway._sendSingleRequest (/home/sabbir/PROJECTS/working_with_explorer/water_sensor_ranking_in_privet_block_chain/caliper-workspace/node_modules/@hyperledger/caliper-fabric/lib/connector-versions/peer-gateway/PeerGateway.js:141:23)
-    at PeerGateway.sendRequests (/home/sabbir/PROJECTS/working_with_explorer/water_sensor_ranking_in_privet_block_chain/caliper-workspace/node_modules/@hyperledger/caliper-core/lib/common/core/connector-base.js:83:37)
-    at AddSensorReadingsWorkload.submitTransaction (/home/sabbir/PROJECTS/working_with_explorer/water_sensor_ranking_in_privet_block_chain/caliper-workspace/benchmarks/workload/addSensorReadings.js:67:31)
-    at /home/sabbir/PROJECTS/working_with_explorer/water_sensor_ranking_in_privet_block_chain/caliper-workspace/node_modules/@hyperledger/caliper-core/lib/worker/caliper-worker.js:97:32
-    at Immediate.<anonymous> (/home/sabbir/PROJECTS/working_with_explorer/water_sensor_ranking_in_privet_block_chain/caliper-workspace/node_modules/@hyperledger/caliper-core/lib/worker/caliper-worker.js:74:17)
-    at process.processImmediate (node:internal/timers:476:21)
-2025.11.09-21:29:53.285[32m info [39m [caliper] [connectors/peer-gateway/PeerGateway] 	disconnecting gateway for user User1
-2025.11.09-21:29:53.285[32m info [39m [caliper] [connectors/peer-gateway/PeerGateway] 	disconnecting gRpc client at peer peer0.org1.example.com
-2025.11.09-21:29:53.286[31m error[39m [caliper] [worker-message-handler] 	Error while handling "test" message for Worker#1 (86404): Error: Could not find details for contract ID SensorContract
-    at PeerGateway._sendSingleRequest (/home/sabbir/PROJECTS/working_with_explorer/water_sensor_ranking_in_privet_block_chain/caliper-workspace/node_modules/@hyperledger/caliper-fabric/lib/connector-versions/peer-gateway/PeerGateway.js:141:23)
-    at PeerGateway.sendRequests (/home/sabbir/PROJECTS/working_with_explorer/water_sensor_ranking_in_privet_block_chain/caliper-workspace/node_modules/@hyperledger/caliper-core/lib/common/core/connector-base.js:83:37)
-    at AddSensorReadingsWorkload.submitTransaction (/home/sabbir/PROJECTS/working_with_explorer/water_sensor_ranking_in_privet_block_chain/caliper-workspace/benchmarks/workload/addSensorReadings.js:67:31)
-    at /home/sabbir/PROJECTS/working_with_explorer/water_sensor_ranking_in_privet_block_chain/caliper-workspace/node_modules/@hyperledger/caliper-core/lib/worker/caliper-worker.js:97:32
-    at Immediate.<anonymous> (/home/sabbir/PROJECTS/working_with_explorer/water_sensor_ranking_in_privet_block_chain/caliper-workspace/node_modules/@hyperledger/caliper-core/lib/worker/caliper-worker.js:74:17)
-    at process.processImmediate (node:internal/timers:476:21)
-2025.11.09-21:29:53.287[32m info [39m [caliper] [connectors/peer-gateway/PeerGateway] 	disconnecting gateway for user User1
-2025.11.09-21:29:53.288[32m info [39m [caliper] [connectors/peer-gateway/PeerGateway] 	disconnecting gRpc client at peer peer0.org1.example.com
-2025.11.09-21:29:53.289[31m error[39m [caliper] [worker-message-handler] 	Error while handling "test" message for Worker (86403): Error: Could not find details for contract ID SensorContract
-    at PeerGateway._sendSingleRequest (/home/sabbir/PROJECTS/working_with_explorer/water_sensor_ranking_in_privet_block_chain/caliper-workspace/node_modules/@hyperledger/caliper-fabric/lib/connector-versions/peer-gateway/PeerGateway.js:141:23)
-    at PeerGateway.sendRequests (/home/sabbir/PROJECTS/working_with_explorer/water_sensor_ranking_in_privet_block_chain/caliper-workspace/node_modules/@hyperledger/caliper-core/lib/common/core/connector-base.js:83:37)
-    at AddSensorReadingsWorkload.submitTransaction (/home/sabbir/PROJECTS/working_with_explorer/water_sensor_ranking_in_privet_block_chain/caliper-workspace/benchmarks/workload/addSensorReadings.js:67:31)
-    at /home/sabbir/PROJECTS/working_with_explorer/water_sensor_ranking_in_privet_block_chain/caliper-workspace/node_modules/@hyperledger/caliper-core/lib/worker/caliper-worker.js:97:32
-    at Immediate.<anonymous> (/home/sabbir/PROJECTS/working_with_explorer/water_sensor_ranking_in_privet_block_chain/caliper-workspace/node_modules/@hyperledger/caliper-core/lib/worker/caliper-worker.js:74:17)
-    at process.processImmediate (node:internal/timers:476:21)
-2025.11.09-21:29:58.294[32m info [39m [caliper] [default-observer] 	Resetting txCount indicator count
-2025.11.09-21:29:58.295[31m error[39m [caliper] [round-orchestrator] 	Failed round 1 (addBatchSensorReadings-round1): Error: Error: Could not find details for contract ID SensorContract
-    at WorkerOrchestrator.updateWorkerPhase (/home/sabbir/PROJECTS/working_with_explorer/water_sensor_ranking_in_privet_block_chain/caliper-workspace/node_modules/@hyperledger/caliper-core/lib/manager/orchestrators/worker-orchestrator.js:315:61)
-    at ProcessMessenger.<anonymous> (/home/sabbir/PROJECTS/working_with_explorer/water_sensor_ranking_in_privet_block_chain/caliper-workspace/node_modules/@hyperledger/caliper-core/lib/manager/orchestrators/worker-orchestrator.js:120:18)
-    at ProcessMessenger.emit (node:events:517:28)
-    at ProcessMessenger.onMessage (/home/sabbir/PROJECTS/working_with_explorer/water_sensor_ranking_in_privet_block_chain/caliper-workspace/node_modules/@hyperledger/caliper-core/lib/common/messengers/messenger-interface.js:40:14)
-    at ChildProcess.<anonymous> (/home/sabbir/PROJECTS/working_with_explorer/water_sensor_ranking_in_privet_block_chain/caliper-workspace/node_modules/@hyperledger/caliper-core/lib/common/messengers/process/process-messenger.js:59:26)
-    at ChildProcess.emit (node:events:517:28)
-    at emit (node:internal/child_process:944:14)
-    at process.processTicksAndRejections (node:internal/process/task_queues:83:21)
-2025.11.09-21:29:58.295[32m info [39m [caliper] [round-orchestrator] 	Started round 2 (addBatchSensorReadings-round2)
-2025.11.09-21:29:58.297[32m info [39m [caliper] [worker-message-handler] 	Preparing Worker#1 for Round#1
-2025.11.09-21:29:58.297[32m info [39m [caliper] [worker-message-handler] 	Preparing Worker#0 for Round#1
-2025.11.09-21:29:58.300[32m info [39m [caliper] [connectors/peer-gateway/PeerGateway] 	Generating contract map for user User1
-2025.11.09-21:29:58.300[32m info [39m [caliper] [caliper-worker] 	Info: worker 1 prepare test phase for round 1 is starting...
-2025.11.09-21:29:58.301[32m info [39m [caliper] [connectors/peer-gateway/PeerGateway] 	Generating contract map for user User1
-2025.11.09-21:29:58.301[32m info [39m [caliper] [caliper-worker] 	Info: worker 0 prepare test phase for round 1 is starting...
-2025.11.09-21:29:58.302[32m info [39m [caliper] [connectors/peer-gateway/PeerGateway] 	disconnecting gateway for user User1
-2025.11.09-21:29:58.302[32m info [39m [caliper] [connectors/peer-gateway/PeerGateway] 	disconnecting gRpc client at peer peer0.org1.example.com
-2025.11.09-21:29:58.302[32m info [39m [caliper] [caliper-worker] 	Info: worker 1 prepare test phase for round 1 is completed
-2025.11.09-21:29:58.302[32m info [39m [caliper] [worker-message-handler] 	Worker#1 prepared for Round#1
-2025.11.09-21:29:58.302[32m info [39m [caliper] [connectors/peer-gateway/PeerGateway] 	disconnecting gateway for user User1
-2025.11.09-21:29:58.302[32m info [39m [caliper] [connectors/peer-gateway/PeerGateway] 	disconnecting gRpc client at peer peer0.org1.example.com
-2025.11.09-21:29:58.302[32m info [39m [caliper] [caliper-worker] 	Info: worker 0 prepare test phase for round 1 is completed
-2025.11.09-21:29:58.303[32m info [39m [caliper] [worker-message-handler] 	Worker#0 prepared for Round#1
-2025.11.09-21:29:58.303[32m info [39m [caliper] [worker-orchestrator] 	2 workers prepared, progressing to test phase.
-2025.11.09-21:29:58.303[32m info [39m [caliper] [round-orchestrator] 	Monitors successfully started
-2025.11.09-21:29:58.304[32m info [39m [caliper] [worker-message-handler] 	Worker#1 is starting Round#1
-2025.11.09-21:29:58.304[32m info [39m [caliper] [worker-message-handler] 	Worker#0 is starting Round#1
-2025.11.09-21:29:58.306[32m info [39m [caliper] [connectors/peer-gateway/PeerGateway] 	Generating contract map for user User1
-2025.11.09-21:29:58.307[32m info [39m [caliper] [caliper-worker] 	Worker #0 starting workload loop
-2025.11.09-21:29:58.307[32m info [39m [caliper] [connectors/peer-gateway/PeerGateway] 	Generating contract map for user User1
-2025.11.09-21:29:58.308[31m error[39m [caliper] [connector-base] 	Unexpected error while sending request: Error: Could not find details for contract ID SensorContract
-    at PeerGateway._sendSingleRequest (/home/sabbir/PROJECTS/working_with_explorer/water_sensor_ranking_in_privet_block_chain/caliper-workspace/node_modules/@hyperledger/caliper-fabric/lib/connector-versions/peer-gateway/PeerGateway.js:141:23)
-    at PeerGateway.sendRequests (/home/sabbir/PROJECTS/working_with_explorer/water_sensor_ranking_in_privet_block_chain/caliper-workspace/node_modules/@hyperledger/caliper-core/lib/common/core/connector-base.js:83:37)
-    at AddSensorReadingsWorkload.submitTransaction (/home/sabbir/PROJECTS/working_with_explorer/water_sensor_ranking_in_privet_block_chain/caliper-workspace/benchmarks/workload/addSensorReadings.js:67:31)
-    at /home/sabbir/PROJECTS/working_with_explorer/water_sensor_ranking_in_privet_block_chain/caliper-workspace/node_modules/@hyperledger/caliper-core/lib/worker/caliper-worker.js:97:32
-    at Immediate.<anonymous> (/home/sabbir/PROJECTS/working_with_explorer/water_sensor_ranking_in_privet_block_chain/caliper-workspace/node_modules/@hyperledger/caliper-core/lib/worker/caliper-worker.js:74:17)
-    at process.processImmediate (node:internal/timers:476:21)
-2025.11.09-21:29:58.309[32m info [39m [caliper] [caliper-worker] 	Worker #1 starting workload loop
-2025.11.09-21:29:58.310[31m error[39m [caliper] [connector-base] 	Unexpected error while sending request: Error: Could not find details for contract ID SensorContract
-    at PeerGateway._sendSingleRequest (/home/sabbir/PROJECTS/working_with_explorer/water_sensor_ranking_in_privet_block_chain/caliper-workspace/node_modules/@hyperledger/caliper-fabric/lib/connector-versions/peer-gateway/PeerGateway.js:141:23)
-    at PeerGateway.sendRequests (/home/sabbir/PROJECTS/working_with_explorer/water_sensor_ranking_in_privet_block_chain/caliper-workspace/node_modules/@hyperledger/caliper-core/lib/common/core/connector-base.js:83:37)
-    at AddSensorReadingsWorkload.submitTransaction (/home/sabbir/PROJECTS/working_with_explorer/water_sensor_ranking_in_privet_block_chain/caliper-workspace/benchmarks/workload/addSensorReadings.js:67:31)
-    at /home/sabbir/PROJECTS/working_with_explorer/water_sensor_ranking_in_privet_block_chain/caliper-workspace/node_modules/@hyperledger/caliper-core/lib/worker/caliper-worker.js:97:32
-    at Immediate.<anonymous> (/home/sabbir/PROJECTS/working_with_explorer/water_sensor_ranking_in_privet_block_chain/caliper-workspace/node_modules/@hyperledger/caliper-core/lib/worker/caliper-worker.js:74:17)
-    at process.processImmediate (node:internal/timers:476:21)
-2025.11.09-21:29:58.351[31m error[39m [caliper] [connector-base] 	Unexpected error while sending request: Error: Could not find details for contract ID SensorContract
-    at PeerGateway._sendSingleRequest (/home/sabbir/PROJECTS/working_with_explorer/water_sensor_ranking_in_privet_block_chain/caliper-workspace/node_modules/@hyperledger/caliper-fabric/lib/connector-versions/peer-gateway/PeerGateway.js:141:23)
-    at PeerGateway.sendRequests (/home/sabbir/PROJECTS/working_with_explorer/water_sensor_ranking_in_privet_block_chain/caliper-workspace/node_modules/@hyperledger/caliper-core/lib/common/core/connector-base.js:83:37)
-    at AddSensorReadingsWorkload.submitTransaction (/home/sabbir/PROJECTS/working_with_explorer/water_sensor_ranking_in_privet_block_chain/caliper-workspace/benchmarks/workload/addSensorReadings.js:67:31)
-    at /home/sabbir/PROJECTS/working_with_explorer/water_sensor_ranking_in_privet_block_chain/caliper-workspace/node_modules/@hyperledger/caliper-core/lib/worker/caliper-worker.js:97:32
-    at Immediate.<anonymous> (/home/sabbir/PROJECTS/working_with_explorer/water_sensor_ranking_in_privet_block_chain/caliper-workspace/node_modules/@hyperledger/caliper-core/lib/worker/caliper-worker.js:74:17)
-    at process.processImmediate (node:internal/timers:476:21)
-2025.11.09-21:29:58.352[31m error[39m [caliper] [caliper-worker] 	Unexpected error in worker #1 caused worker to finish round #1: Error: Could not find details for contract ID SensorContract
-    at PeerGateway._sendSingleRequest (/home/sabbir/PROJECTS/working_with_explorer/water_sensor_ranking_in_privet_block_chain/caliper-workspace/node_modules/@hyperledger/caliper-fabric/lib/connector-versions/peer-gateway/PeerGateway.js:141:23)
-    at PeerGateway.sendRequests (/home/sabbir/PROJECTS/working_with_explorer/water_sensor_ranking_in_privet_block_chain/caliper-workspace/node_modules/@hyperledger/caliper-core/lib/common/core/connector-base.js:83:37)
-    at AddSensorReadingsWorkload.submitTransaction (/home/sabbir/PROJECTS/working_with_explorer/water_sensor_ranking_in_privet_block_chain/caliper-workspace/benchmarks/workload/addSensorReadings.js:67:31)
-    at /home/sabbir/PROJECTS/working_with_explorer/water_sensor_ranking_in_privet_block_chain/caliper-workspace/node_modules/@hyperledger/caliper-core/lib/worker/caliper-worker.js:97:32
-    at Immediate.<anonymous> (/home/sabbir/PROJECTS/working_with_explorer/water_sensor_ranking_in_privet_block_chain/caliper-workspace/node_modules/@hyperledger/caliper-core/lib/worker/caliper-worker.js:74:17)
-    at process.processImmediate (node:internal/timers:476:21)
-2025.11.09-21:29:58.361[31m error[39m [caliper] [connector-base] 	Unexpected error while sending request: Error: Could not find details for contract ID SensorContract
-    at PeerGateway._sendSingleRequest (/home/sabbir/PROJECTS/working_with_explorer/water_sensor_ranking_in_privet_block_chain/caliper-workspace/node_modules/@hyperledger/caliper-fabric/lib/connector-versions/peer-gateway/PeerGateway.js:141:23)
-    at PeerGateway.sendRequests (/home/sabbir/PROJECTS/working_with_explorer/water_sensor_ranking_in_privet_block_chain/caliper-workspace/node_modules/@hyperledger/caliper-core/lib/common/core/connector-base.js:83:37)
-    at AddSensorReadingsWorkload.submitTransaction (/home/sabbir/PROJECTS/working_with_explorer/water_sensor_ranking_in_privet_block_chain/caliper-workspace/benchmarks/workload/addSensorReadings.js:67:31)
-    at /home/sabbir/PROJECTS/working_with_explorer/water_sensor_ranking_in_privet_block_chain/caliper-workspace/node_modules/@hyperledger/caliper-core/lib/worker/caliper-worker.js:97:32
-    at Immediate.<anonymous> (/home/sabbir/PROJECTS/working_with_explorer/water_sensor_ranking_in_privet_block_chain/caliper-workspace/node_modules/@hyperledger/caliper-core/lib/worker/caliper-worker.js:74:17)
-    at process.processImmediate (node:internal/timers:476:21)
-2025.11.09-21:29:58.362[31m error[39m [caliper] [caliper-worker] 	Unexpected error in worker #0 caused worker to finish round #1: Error: Could not find details for contract ID SensorContract
-    at PeerGateway._sendSingleRequest (/home/sabbir/PROJECTS/working_with_explorer/water_sensor_ranking_in_privet_block_chain/caliper-workspace/node_modules/@hyperledger/caliper-fabric/lib/connector-versions/peer-gateway/PeerGateway.js:141:23)
-    at PeerGateway.sendRequests (/home/sabbir/PROJECTS/working_with_explorer/water_sensor_ranking_in_privet_block_chain/caliper-workspace/node_modules/@hyperledger/caliper-core/lib/common/core/connector-base.js:83:37)
-    at AddSensorReadingsWorkload.submitTransaction (/home/sabbir/PROJECTS/working_with_explorer/water_sensor_ranking_in_privet_block_chain/caliper-workspace/benchmarks/workload/addSensorReadings.js:67:31)
-    at /home/sabbir/PROJECTS/working_with_explorer/water_sensor_ranking_in_privet_block_chain/caliper-workspace/node_modules/@hyperledger/caliper-core/lib/worker/caliper-worker.js:97:32
-    at Immediate.<anonymous> (/home/sabbir/PROJECTS/working_with_explorer/water_sensor_ranking_in_privet_block_chain/caliper-workspace/node_modules/@hyperledger/caliper-core/lib/worker/caliper-worker.js:74:17)
-    at process.processImmediate (node:internal/timers:476:21)
-2025.11.09-21:29:59.354[32m info [39m [caliper] [connectors/peer-gateway/PeerGateway] 	disconnecting gateway for user User1
-2025.11.09-21:29:59.354[32m info [39m [caliper] [connectors/peer-gateway/PeerGateway] 	disconnecting gRpc client at peer peer0.org1.example.com
-2025.11.09-21:29:59.354[31m error[39m [caliper] [worker-message-handler] 	Error while handling "test" message for Worker#1 (86404): Error: Could not find details for contract ID SensorContract
-    at PeerGateway._sendSingleRequest (/home/sabbir/PROJECTS/working_with_explorer/water_sensor_ranking_in_privet_block_chain/caliper-workspace/node_modules/@hyperledger/caliper-fabric/lib/connector-versions/peer-gateway/PeerGateway.js:141:23)
-    at PeerGateway.sendRequests (/home/sabbir/PROJECTS/working_with_explorer/water_sensor_ranking_in_privet_block_chain/caliper-workspace/node_modules/@hyperledger/caliper-core/lib/common/core/connector-base.js:83:37)
-    at AddSensorReadingsWorkload.submitTransaction (/home/sabbir/PROJECTS/working_with_explorer/water_sensor_ranking_in_privet_block_chain/caliper-workspace/benchmarks/workload/addSensorReadings.js:67:31)
-    at /home/sabbir/PROJECTS/working_with_explorer/water_sensor_ranking_in_privet_block_chain/caliper-workspace/node_modules/@hyperledger/caliper-core/lib/worker/caliper-worker.js:97:32
-    at Immediate.<anonymous> (/home/sabbir/PROJECTS/working_with_explorer/water_sensor_ranking_in_privet_block_chain/caliper-workspace/node_modules/@hyperledger/caliper-core/lib/worker/caliper-worker.js:74:17)
-    at process.processImmediate (node:internal/timers:476:21)
-2025.11.09-21:29:59.364[32m info [39m [caliper] [connectors/peer-gateway/PeerGateway] 	disconnecting gateway for user User1
-2025.11.09-21:29:59.364[32m info [39m [caliper] [connectors/peer-gateway/PeerGateway] 	disconnecting gRpc client at peer peer0.org1.example.com
-2025.11.09-21:29:59.365[31m error[39m [caliper] [worker-message-handler] 	Error while handling "test" message for Worker (86403): Error: Could not find details for contract ID SensorContract
-    at PeerGateway._sendSingleRequest (/home/sabbir/PROJECTS/working_with_explorer/water_sensor_ranking_in_privet_block_chain/caliper-workspace/node_modules/@hyperledger/caliper-fabric/lib/connector-versions/peer-gateway/PeerGateway.js:141:23)
-    at PeerGateway.sendRequests (/home/sabbir/PROJECTS/working_with_explorer/water_sensor_ranking_in_privet_block_chain/caliper-workspace/node_modules/@hyperledger/caliper-core/lib/common/core/connector-base.js:83:37)
-    at AddSensorReadingsWorkload.submitTransaction (/home/sabbir/PROJECTS/working_with_explorer/water_sensor_ranking_in_privet_block_chain/caliper-workspace/benchmarks/workload/addSensorReadings.js:67:31)
-    at /home/sabbir/PROJECTS/working_with_explorer/water_sensor_ranking_in_privet_block_chain/caliper-workspace/node_modules/@hyperledger/caliper-core/lib/worker/caliper-worker.js:97:32
-    at Immediate.<anonymous> (/home/sabbir/PROJECTS/working_with_explorer/water_sensor_ranking_in_privet_block_chain/caliper-workspace/node_modules/@hyperledger/caliper-core/lib/worker/caliper-worker.js:74:17)
-    at process.processImmediate (node:internal/timers:476:21)
-2025.11.09-21:30:04.356[32m info [39m [caliper] [default-observer] 	Resetting txCount indicator count
-2025.11.09-21:30:04.357[31m error[39m [caliper] [round-orchestrator] 	Failed round 2 (addBatchSensorReadings-round2): Error: Error: Could not find details for contract ID SensorContract
-    at WorkerOrchestrator.updateWorkerPhase (/home/sabbir/PROJECTS/working_with_explorer/water_sensor_ranking_in_privet_block_chain/caliper-workspace/node_modules/@hyperledger/caliper-core/lib/manager/orchestrators/worker-orchestrator.js:315:61)
-    at ProcessMessenger.<anonymous> (/home/sabbir/PROJECTS/working_with_explorer/water_sensor_ranking_in_privet_block_chain/caliper-workspace/node_modules/@hyperledger/caliper-core/lib/manager/orchestrators/worker-orchestrator.js:120:18)
-    at ProcessMessenger.emit (node:events:517:28)
-    at ProcessMessenger.onMessage (/home/sabbir/PROJECTS/working_with_explorer/water_sensor_ranking_in_privet_block_chain/caliper-workspace/node_modules/@hyperledger/caliper-core/lib/common/messengers/messenger-interface.js:40:14)
-    at ChildProcess.<anonymous> (/home/sabbir/PROJECTS/working_with_explorer/water_sensor_ranking_in_privet_block_chain/caliper-workspace/node_modules/@hyperledger/caliper-core/lib/common/messengers/process/process-messenger.js:59:26)
-    at ChildProcess.emit (node:events:517:28)
-    at emit (node:internal/child_process:944:14)
-    at process.processTicksAndRejections (node:internal/process/task_queues:83:21)
-2025.11.09-21:30:04.358[32m info [39m [caliper] [report-builder] 	### All test results ###
-2025.11.09-21:30:04.358[31m error[39m [caliper] [report-builder] 	No data within test result; implies error within configuration files
-2025.11.09-21:30:04.358[31m error[39m [caliper] [round-orchestrator] 	Error while finalizing the report: Error: unrecognized report table
-    at ReportBuilder.setSummaryTable (/home/sabbir/PROJECTS/working_with_explorer/water_sensor_ranking_in_privet_block_chain/caliper-workspace/node_modules/@hyperledger/caliper-core/lib/manager/report/report-builder.js:142:19)
-    at Report.printResultsByRound (/home/sabbir/PROJECTS/working_with_explorer/water_sensor_ranking_in_privet_block_chain/caliper-workspace/node_modules/@hyperledger/caliper-core/lib/manager/report/report.js:182:28)
-    at RoundOrchestrator.run (/home/sabbir/PROJECTS/working_with_explorer/water_sensor_ranking_in_privet_block_chain/caliper-workspace/node_modules/@hyperledger/caliper-core/lib/manager/orchestrators/round-orchestrator.js:229:25)
-    at async CaliperEngine.run (/home/sabbir/PROJECTS/working_with_explorer/water_sensor_ranking_in_privet_block_chain/caliper-workspace/node_modules/@hyperledger/caliper-core/lib/manager/caliper-engine.js:153:17)
-    at async LaunchManager.handler (/home/sabbir/PROJECTS/working_with_explorer/water_sensor_ranking_in_privet_block_chain/caliper-workspace/node_modules/@hyperledger/caliper-cli/lib/launch/lib/launchManager.js:81:30)
-2025.11.09-21:30:04.359[32m info [39m [caliper] [monitor.js] 	Stopping all monitors
-2025.11.09-21:30:04.460[32m info [39m [caliper] [worker-orchestrator] 	Sending exit message to connected workers
-2025.11.09-21:30:04.461[32m info [39m [caliper] [round-orchestrator] 	Benchmark finished in 14.305 seconds. Total rounds: 2. Successful rounds: 0. Failed rounds: 2.
-2025.11.09-21:30:04.461[32m info [39m [caliper] [caliper-engine] 	Network configuration attribute "caliper.command.end" is not present, skipping end command
-2025.11.09-21:30:04.461[32m info [39m [caliper] [cli-launch-manager] 	Benchmark successfully finished!
-2025.11.09-21:30:04.461[32m info [39m [caliper] [worker-message-handler] 	Worker#0 is exiting
-2025.11.09-21:30:04.461[32m info [39m [caliper] [worker-message-handler] 	Worker#1 is exiting
+2026.10.11-00:59:00.585[32m info [39m [caliper] [cli-launch-manager] 	Set workspace path: /home/sabbir/Projects/ai-agent-auth/FPAIF-blockchain-main/caliper-workspace
+2026.10.11-00:59:00.586[32m info [39m [caliper] [cli-launch-manager] 	Set benchmark configuration path: /home/sabbir/Projects/ai-agent-auth/FPAIF-blockchain-main/caliper-workspace/benchmarks/config.yaml
+2026.10.11-00:59:00.586[32m info [39m [caliper] [cli-launch-manager] 	Set network configuration path: /home/sabbir/Projects/ai-agent-auth/FPAIF-blockchain-main/caliper-workspace/networks/agent-identity-network.yaml
+2026.10.11-00:59:00.586[32m info [39m [caliper] [cli-launch-manager] 	Set SUT type: fabric
+2026.10.11-00:59:00.596[32m info [39m [caliper] [benchmark-validator] 	No observer specified, will default to `none`
+2026.10.11-00:59:00.597[32m info [39m [caliper] [caliper-engine] 	Starting benchmark flow
+2026.10.11-00:59:00.597[32m info [39m [caliper] [caliper-engine] 	Skipping start commands due to benchmark flow conditioning
+2026.10.11-00:59:00.597[32m info [39m [caliper] [caliper-engine] 	Skipping initialization phase due to benchmark flow conditioning
+2026.10.11-00:59:00.598[32m info [39m [caliper] [caliper-engine] 	Skipping install smart contract phase due to benchmark flow conditioning
+2026.10.11-00:59:01.524[32m info [39m [caliper] [FabricConnectorFactory] 	Initializing peer gateway connector compatible with installed fabric-gateway SDK: 1.5.0
+2026.10.11-00:59:01.551[32m info [39m [caliper] [IdentityManager] 	Adding User1 (admin=false) as User1 for organization Org1MSP
+2026.10.11-00:59:01.558[32m info [39m [caliper] [monitor.js] 	Attempting to create resource monitor of type docker
+2026.10.11-00:59:01.564[32m info [39m [caliper] [default-observer] 	Observer interval set to 5000 milliseconds
+2026.10.11-00:59:01.566[32m info [39m [caliper] [round-orchestrator] 	Preparing worker connections
+2026.10.11-00:59:01.567[32m info [39m [caliper] [worker-orchestrator] 	Launching worker 1 of 2
+2026.10.11-00:59:01.572[32m info [39m [caliper] [worker-orchestrator] 	Launching worker 2 of 2
+2026.10.11-00:59:01.574[32m info [39m [caliper] [worker-orchestrator] 	Messenger not configured, entering configure phase...
+2026.10.11-00:59:01.577[32m info [39m [caliper] [worker-orchestrator] 	No existing workers detected, entering worker launch phase...
+2026.10.11-00:59:01.578[32m info [39m [caliper] [worker-orchestrator] 	Waiting for 2 workers to be connected...
+2026.10.11-00:59:02.150[32m info [39m [caliper] [cli-launch-worker] 	Set workspace path: /home/sabbir/Projects/ai-agent-auth/FPAIF-blockchain-main/caliper-workspace
+2026.10.11-00:59:02.151[32m info [39m [caliper] [cli-launch-worker] 	Set benchmark configuration path: /home/sabbir/Projects/ai-agent-auth/FPAIF-blockchain-main/caliper-workspace/benchmarks/config.yaml
+2026.10.11-00:59:02.151[32m info [39m [caliper] [cli-launch-worker] 	Set network configuration path: /home/sabbir/Projects/ai-agent-auth/FPAIF-blockchain-main/caliper-workspace/networks/agent-identity-network.yaml
+2026.10.11-00:59:02.151[32m info [39m [caliper] [cli-launch-worker] 	Set SUT type: fabric
+2026.10.11-00:59:02.158[32m info [39m [caliper] [cli-launch-worker] 	Set workspace path: /home/sabbir/Projects/ai-agent-auth/FPAIF-blockchain-main/caliper-workspace
+2026.10.11-00:59:02.158[32m info [39m [caliper] [cli-launch-worker] 	Set benchmark configuration path: /home/sabbir/Projects/ai-agent-auth/FPAIF-blockchain-main/caliper-workspace/benchmarks/config.yaml
+2026.10.11-00:59:02.159[32m info [39m [caliper] [cli-launch-worker] 	Set network configuration path: /home/sabbir/Projects/ai-agent-auth/FPAIF-blockchain-main/caliper-workspace/networks/agent-identity-network.yaml
+2026.10.11-00:59:02.159[32m info [39m [caliper] [cli-launch-worker] 	Set SUT type: fabric
+2026.10.11-00:59:02.180[32m info [39m [caliper] [worker-orchestrator] 	2 workers connected, progressing to worker assignment phase.
+2026.10.11-00:59:02.180[32m info [39m [caliper] [worker-orchestrator] 	Workers currently unassigned, awaiting index assignment...
+2026.10.11-00:59:02.183[32m info [39m [caliper] [worker-orchestrator] 	Waiting for 2 workers to be assigned...
+2026.10.11-00:59:02.223[32m info [39m [caliper] [worker-orchestrator] 	2 workers assigned, progressing to worker initialization phase.
+2026.10.11-00:59:02.223[32m info [39m [caliper] [worker-orchestrator] 	Waiting for 2 workers to be ready...
+2026.10.11-00:59:02.224[32m info [39m [caliper] [worker-message-handler] 	Initializing Worker#1...
+2026.10.11-00:59:02.225[32m info [39m [caliper] [worker-message-handler] 	Initializing Worker#0...
+2026.10.11-00:59:02.700[32m info [39m [caliper] [FabricConnectorFactory] 	Initializing peer gateway connector compatible with installed fabric-gateway SDK: 1.5.0
+2026.10.11-00:59:02.707[32m info [39m [caliper] [IdentityManager] 	Adding User1 (admin=false) as User1 for organization Org1MSP
+2026.10.11-00:59:02.709[32m info [39m [caliper] [worker-message-handler] 	Worker#1 initialized
+2026.10.11-00:59:02.732[32m info [39m [caliper] [FabricConnectorFactory] 	Initializing peer gateway connector compatible with installed fabric-gateway SDK: 1.5.0
+2026.10.11-00:59:02.739[32m info [39m [caliper] [IdentityManager] 	Adding User1 (admin=false) as User1 for organization Org1MSP
+2026.10.11-00:59:02.744[32m info [39m [caliper] [worker-message-handler] 	Worker#0 initialized
+2026.10.11-00:59:02.745[32m info [39m [caliper] [worker-orchestrator] 	2 workers ready, progressing to test preparation phase.
+2026.10.11-00:59:02.745[32m info [39m [caliper] [round-orchestrator] 	Started round 1 (registerAgent-10tps)
+2026.10.11-00:59:02.747[32m info [39m [caliper] [worker-message-handler] 	Preparing Worker#0 for Round#0
+2026.10.11-00:59:02.747[32m info [39m [caliper] [worker-message-handler] 	Preparing Worker#1 for Round#0
+2026.10.11-00:59:02.810[32m info [39m [caliper] [connectors/peer-gateway/PeerGateway] 	Generating contract map for user User1
+2026.10.11-00:59:02.810[32m info [39m [caliper] [caliper-worker] 	Info: worker 1 prepare test phase for round 0 is starting...
+2026.10.11-00:59:02.811[32m info [39m [caliper] [connectors/peer-gateway/PeerGateway] 	disconnecting gateway for user User1
+2026.10.11-00:59:02.811[32m info [39m [caliper] [connectors/peer-gateway/PeerGateway] 	disconnecting gRpc client at peer peer0.org1.example.com
+2026.10.11-00:59:02.812[32m info [39m [caliper] [caliper-worker] 	Info: worker 1 prepare test phase for round 0 is completed
+2026.10.11-00:59:02.813[32m info [39m [caliper] [worker-message-handler] 	Worker#1 prepared for Round#0
+2026.10.11-00:59:02.830[32m info [39m [caliper] [connectors/peer-gateway/PeerGateway] 	Generating contract map for user User1
+2026.10.11-00:59:02.831[32m info [39m [caliper] [caliper-worker] 	Info: worker 0 prepare test phase for round 0 is starting...
+2026.10.11-00:59:02.832[32m info [39m [caliper] [connectors/peer-gateway/PeerGateway] 	disconnecting gateway for user User1
+2026.10.11-00:59:02.832[32m info [39m [caliper] [connectors/peer-gateway/PeerGateway] 	disconnecting gRpc client at peer peer0.org1.example.com
+2026.10.11-00:59:02.833[32m info [39m [caliper] [caliper-worker] 	Info: worker 0 prepare test phase for round 0 is completed
+2026.10.11-00:59:02.833[32m info [39m [caliper] [worker-message-handler] 	Worker#0 prepared for Round#0
+2026.10.11-00:59:02.835[32m info [39m [caliper] [worker-orchestrator] 	2 workers prepared, progressing to test phase.
+2026.10.11-00:59:02.853[32m info [39m [caliper] [round-orchestrator] 	Monitors successfully started
+2026.10.11-00:59:02.855[32m info [39m [caliper] [worker-message-handler] 	Worker#0 is starting Round#0
+2026.10.11-00:59:02.857[32m info [39m [caliper] [worker-message-handler] 	Worker#1 is starting Round#0
+2026.10.11-00:59:02.861[32m info [39m [caliper] [connectors/peer-gateway/PeerGateway] 	Generating contract map for user User1
+2026.10.11-00:59:02.864[32m info [39m [caliper] [connectors/peer-gateway/PeerGateway] 	Generating contract map for user User1
+2026.10.11-00:59:02.866[32m info [39m [caliper] [caliper-worker] 	Worker #1 starting workload loop
+2026.10.11-00:59:02.867[32m info [39m [caliper] [caliper-worker] 	Worker #0 starting workload loop
+2026.10.11-00:59:07.850[32m info [39m [caliper] [default-observer] 	[registerAgent-10tps Round 0 Transaction Info] - Submitted: 42 Succ: 40 Fail:0 Unfinished:2
+2026.10.11-00:59:12.837[32m info [39m [caliper] [default-observer] 	[registerAgent-10tps Round 0 Transaction Info] - Submitted: 100 Succ: 100 Fail:0 Unfinished:0
+2026.10.11-00:59:13.773[32m info [39m [caliper] [connectors/peer-gateway/PeerGateway] 	disconnecting gateway for user User1
+2026.10.11-00:59:13.773[32m info [39m [caliper] [connectors/peer-gateway/PeerGateway] 	disconnecting gRpc client at peer peer0.org1.example.com
+2026.10.11-00:59:13.774[32m info [39m [caliper] [worker-message-handler] 	Worker#1 finished Round#0
+2026.10.11-00:59:13.774[32m info [39m [caliper] [connectors/peer-gateway/PeerGateway] 	disconnecting gateway for user User1
+2026.10.11-00:59:13.774[32m info [39m [caliper] [connectors/peer-gateway/PeerGateway] 	disconnecting gRpc client at peer peer0.org1.example.com
+2026.10.11-00:59:13.775[32m info [39m [caliper] [worker-message-handler] 	Worker#0 finished Round#0
+2026.10.11-00:59:18.778[32m info [39m [caliper] [default-observer] 	Resetting txCount indicator count
+2026.10.11-00:59:18.785[32m info [39m [caliper] [report-builder] 	### Test result ###
+2026.10.11-00:59:18.792[32m info [39m [caliper] [report-builder] 	
++---------------------+------+------+-----------------+-----------------+-----------------+-----------------+------------------+
+| Name                | Succ | Fail | Send Rate (TPS) | Max Latency (s) | Min Latency (s) | Avg Latency (s) | Throughput (TPS) |
+|---------------------|------|------|-----------------|-----------------|-----------------|-----------------|------------------|
+| registerAgent-10tps | 100  | 0    | 10.2            | 0.90            | 0.08            | 0.49            | 10.1             |
++---------------------+------+------+-----------------+-----------------+-----------------+-----------------+------------------+
+
+2026.10.11-00:59:18.797[32m info [39m [caliper] [round-orchestrator] 	Finished round 1 (registerAgent-10tps) in 9.91 seconds
+2026.10.11-00:59:18.798[32m info [39m [caliper] [monitor.js] 	Stopping all monitors
+2026.10.11-00:59:18.898[32m info [39m [caliper] [round-orchestrator] 	Waiting 5 seconds for the next round...
+2026.10.11-00:59:23.900[32m info [39m [caliper] [round-orchestrator] 	Started round 2 (registerAgent-25tps)
+2026.10.11-00:59:23.902[32m info [39m [caliper] [worker-message-handler] 	Preparing Worker#0 for Round#1
+2026.10.11-00:59:23.903[32m info [39m [caliper] [worker-message-handler] 	Preparing Worker#1 for Round#1
+2026.10.11-00:59:23.906[32m info [39m [caliper] [connectors/peer-gateway/PeerGateway] 	Generating contract map for user User1
+2026.10.11-00:59:23.907[32m info [39m [caliper] [caliper-worker] 	Info: worker 0 prepare test phase for round 1 is starting...
+2026.10.11-00:59:23.908[32m info [39m [caliper] [connectors/peer-gateway/PeerGateway] 	Generating contract map for user User1
+2026.10.11-00:59:23.908[32m info [39m [caliper] [caliper-worker] 	Info: worker 1 prepare test phase for round 1 is starting...
+2026.10.11-00:59:23.909[32m info [39m [caliper] [connectors/peer-gateway/PeerGateway] 	disconnecting gateway for user User1
+2026.10.11-00:59:23.909[32m info [39m [caliper] [connectors/peer-gateway/PeerGateway] 	disconnecting gRpc client at peer peer0.org1.example.com
+2026.10.11-00:59:23.909[32m info [39m [caliper] [caliper-worker] 	Info: worker 0 prepare test phase for round 1 is completed
+2026.10.11-00:59:23.910[32m info [39m [caliper] [connectors/peer-gateway/PeerGateway] 	disconnecting gateway for user User1
+2026.10.11-00:59:23.910[32m info [39m [caliper] [connectors/peer-gateway/PeerGateway] 	disconnecting gRpc client at peer peer0.org1.example.com
+2026.10.11-00:59:23.910[32m info [39m [caliper] [worker-message-handler] 	Worker#0 prepared for Round#1
+2026.10.11-00:59:23.910[32m info [39m [caliper] [caliper-worker] 	Info: worker 1 prepare test phase for round 1 is completed
+2026.10.11-00:59:23.911[32m info [39m [caliper] [worker-message-handler] 	Worker#1 prepared for Round#1
+2026.10.11-00:59:23.912[32m info [39m [caliper] [worker-orchestrator] 	2 workers prepared, progressing to test phase.
+2026.10.11-00:59:23.921[32m info [39m [caliper] [round-orchestrator] 	Monitors successfully started
+2026.10.11-00:59:23.924[32m info [39m [caliper] [worker-message-handler] 	Worker#1 is starting Round#1
+2026.10.11-00:59:23.924[32m info [39m [caliper] [worker-message-handler] 	Worker#0 is starting Round#1
+2026.10.11-00:59:23.926[32m info [39m [caliper] [connectors/peer-gateway/PeerGateway] 	Generating contract map for user User1
+2026.10.11-00:59:23.927[32m info [39m [caliper] [caliper-worker] 	Worker #0 starting workload loop
+2026.10.11-00:59:23.930[32m info [39m [caliper] [connectors/peer-gateway/PeerGateway] 	Generating contract map for user User1
+2026.10.11-00:59:23.930[32m info [39m [caliper] [caliper-worker] 	Worker #1 starting workload loop
+2026.10.11-00:59:28.955[32m info [39m [caliper] [default-observer] 	[registerAgent-25tps Round 1 Transaction Info] - Submitted: 114 Succ: 105 Fail:0 Unfinished:9
+2026.10.11-00:59:33.956[32m info [39m [caliper] [default-observer] 	[registerAgent-25tps Round 1 Transaction Info] - Submitted: 250 Succ: 250 Fail:0 Unfinished:0
+2026.10.11-00:59:34.951[32m info [39m [caliper] [connectors/peer-gateway/PeerGateway] 	disconnecting gateway for user User1
+2026.10.11-00:59:34.951[32m info [39m [caliper] [connectors/peer-gateway/PeerGateway] 	disconnecting gRpc client at peer peer0.org1.example.com
+2026.10.11-00:59:34.952[32m info [39m [caliper] [worker-message-handler] 	Worker#0 finished Round#1
+2026.10.11-00:59:34.955[32m info [39m [caliper] [connectors/peer-gateway/PeerGateway] 	disconnecting gateway for user User1
+2026.10.11-00:59:34.955[32m info [39m [caliper] [connectors/peer-gateway/PeerGateway] 	disconnecting gRpc client at peer peer0.org1.example.com
+2026.10.11-00:59:34.955[32m info [39m [caliper] [worker-message-handler] 	Worker#1 finished Round#1
+2026.10.11-00:59:39.960[32m info [39m [caliper] [default-observer] 	Resetting txCount indicator count
+2026.10.11-00:59:39.962[32m info [39m [caliper] [report-builder] 	### Test result ###
+2026.10.11-00:59:39.966[32m info [39m [caliper] [report-builder] 	
++---------------------+------+------+-----------------+-----------------+-----------------+-----------------+------------------+
+| Name                | Succ | Fail | Send Rate (TPS) | Max Latency (s) | Min Latency (s) | Avg Latency (s) | Throughput (TPS) |
+|---------------------|------|------|-----------------|-----------------|-----------------|-----------------|------------------|
+| registerAgent-25tps | 250  | 0    | 25.2            | 0.49            | 0.06            | 0.25            | 25.1             |
++---------------------+------+------+-----------------+-----------------+-----------------+-----------------+------------------+
+
+2026.10.11-00:59:39.968[32m info [39m [caliper] [round-orchestrator] 	Finished round 2 (registerAgent-25tps) in 10.028 seconds
+2026.10.11-00:59:39.969[32m info [39m [caliper] [monitor.js] 	Stopping all monitors
+2026.10.11-00:59:40.070[32m info [39m [caliper] [round-orchestrator] 	Waiting 5 seconds for the next round...
+2026.10.11-00:59:45.077[32m info [39m [caliper] [round-orchestrator] 	Started round 3 (registerAgent-50tps)
+2026.10.11-00:59:45.079[32m info [39m [caliper] [worker-message-handler] 	Preparing Worker#0 for Round#2
+2026.10.11-00:59:45.083[32m info [39m [caliper] [connectors/peer-gateway/PeerGateway] 	Generating contract map for user User1
+2026.10.11-00:59:45.083[32m info [39m [caliper] [caliper-worker] 	Info: worker 0 prepare test phase for round 2 is starting...
+2026.10.11-00:59:45.088[32m info [39m [caliper] [connectors/peer-gateway/PeerGateway] 	disconnecting gateway for user User1
+2026.10.11-00:59:45.088[32m info [39m [caliper] [connectors/peer-gateway/PeerGateway] 	disconnecting gRpc client at peer peer0.org1.example.com
+2026.10.11-00:59:45.088[32m info [39m [caliper] [caliper-worker] 	Info: worker 0 prepare test phase for round 2 is completed
+2026.10.11-00:59:45.089[32m info [39m [caliper] [worker-message-handler] 	Worker#0 prepared for Round#2
+2026.10.11-00:59:45.091[32m info [39m [caliper] [worker-message-handler] 	Preparing Worker#1 for Round#2
+2026.10.11-00:59:45.094[32m info [39m [caliper] [connectors/peer-gateway/PeerGateway] 	Generating contract map for user User1
+2026.10.11-00:59:45.095[32m info [39m [caliper] [caliper-worker] 	Info: worker 1 prepare test phase for round 2 is starting...
+2026.10.11-00:59:45.098[32m info [39m [caliper] [connectors/peer-gateway/PeerGateway] 	disconnecting gateway for user User1
+2026.10.11-00:59:45.098[32m info [39m [caliper] [connectors/peer-gateway/PeerGateway] 	disconnecting gRpc client at peer peer0.org1.example.com
+2026.10.11-00:59:45.098[32m info [39m [caliper] [caliper-worker] 	Info: worker 1 prepare test phase for round 2 is completed
+2026.10.11-00:59:45.098[32m info [39m [caliper] [worker-message-handler] 	Worker#1 prepared for Round#2
+2026.10.11-00:59:45.100[32m info [39m [caliper] [worker-orchestrator] 	2 workers prepared, progressing to test phase.
+2026.10.11-00:59:45.114[32m info [39m [caliper] [round-orchestrator] 	Monitors successfully started
+2026.10.11-00:59:45.116[32m info [39m [caliper] [worker-message-handler] 	Worker#0 is starting Round#2
+2026.10.11-00:59:45.118[32m info [39m [caliper] [connectors/peer-gateway/PeerGateway] 	Generating contract map for user User1
+2026.10.11-00:59:45.120[32m info [39m [caliper] [caliper-worker] 	Worker #0 starting workload loop
+2026.10.11-00:59:45.120[32m info [39m [caliper] [worker-message-handler] 	Worker#1 is starting Round#2
+2026.10.11-00:59:45.122[32m info [39m [caliper] [connectors/peer-gateway/PeerGateway] 	Generating contract map for user User1
+2026.10.11-00:59:45.124[32m info [39m [caliper] [caliper-worker] 	Worker #1 starting workload loop
+2026.10.11-00:59:50.103[32m info [39m [caliper] [default-observer] 	[registerAgent-50tps Round 2 Transaction Info] - Submitted: 195 Succ: 180 Fail:0 Unfinished:15
+2026.10.11-00:59:55.108[32m info [39m [caliper] [default-observer] 	[registerAgent-50tps Round 2 Transaction Info] - Submitted: 452 Succ: 436 Fail:0 Unfinished:16
+2026.10.11-00:59:56.686[32m info [39m [caliper] [connectors/peer-gateway/PeerGateway] 	disconnecting gateway for user User1
+2026.10.11-00:59:56.687[32m info [39m [caliper] [connectors/peer-gateway/PeerGateway] 	disconnecting gRpc client at peer peer0.org1.example.com
+2026.10.11-00:59:56.688[32m info [39m [caliper] [worker-message-handler] 	Worker#1 finished Round#2
+2026.10.11-00:59:56.721[32m info [39m [caliper] [connectors/peer-gateway/PeerGateway] 	disconnecting gateway for user User1
+2026.10.11-00:59:56.721[32m info [39m [caliper] [connectors/peer-gateway/PeerGateway] 	disconnecting gRpc client at peer peer0.org1.example.com
+2026.10.11-00:59:56.722[32m info [39m [caliper] [worker-message-handler] 	Worker#0 finished Round#2
+2026.10.11-01:00:01.724[32m info [39m [caliper] [default-observer] 	Resetting txCount indicator count
+2026.10.11-01:00:01.724[32m info [39m [caliper] [report-builder] 	### Test result ###
+2026.10.11-01:00:01.725[32m info [39m [caliper] [report-builder] 	
++---------------------+------+------+-----------------+-----------------+-----------------+-----------------+------------------+
+| Name                | Succ | Fail | Send Rate (TPS) | Max Latency (s) | Min Latency (s) | Avg Latency (s) | Throughput (TPS) |
+|---------------------|------|------|-----------------|-----------------|-----------------|-----------------|------------------|
+| registerAgent-50tps | 500  | 0    | 48.3            | 0.71            | 0.08            | 0.32            | 47.5             |
++---------------------+------+------+-----------------+-----------------+-----------------+-----------------+------------------+
+
+2026.10.11-01:00:01.726[32m info [39m [caliper] [round-orchestrator] 	Finished round 3 (registerAgent-50tps) in 10.601 seconds
+2026.10.11-01:00:01.726[32m info [39m [caliper] [monitor.js] 	Stopping all monitors
+2026.10.11-01:00:01.827[32m info [39m [caliper] [round-orchestrator] 	Waiting 5 seconds for the next round...
+2026.10.11-01:00:07.294[32m info [39m [caliper] [round-orchestrator] 	Started round 4 (getAgent-query)
+2026.10.11-01:00:07.305[32m info [39m [caliper] [worker-message-handler] 	Preparing Worker#0 for Round#3
+2026.10.11-01:00:07.307[32m info [39m [caliper] [worker-message-handler] 	Preparing Worker#1 for Round#3
+2026.10.11-01:00:07.314[32m info [39m [caliper] [connectors/peer-gateway/PeerGateway] 	Generating contract map for user User1
+2026.10.11-01:00:07.319[32m info [39m [caliper] [caliper-worker] 	Info: worker 1 prepare test phase for round 3 is starting...
+2026.10.11-01:00:07.322[32m info [39m [caliper] [connectors/peer-gateway/PeerGateway] 	Generating contract map for user User1
+2026.10.11-01:00:07.324[32m info [39m [caliper] [caliper-worker] 	Info: worker 0 prepare test phase for round 3 is starting...
+2026.10.11-01:00:49.269[32m info [39m [caliper] [connectors/peer-gateway/PeerGateway] 	disconnecting gateway for user User1
+2026.10.11-01:00:49.270[32m info [39m [caliper] [connectors/peer-gateway/PeerGateway] 	disconnecting gateway for user User1
+2026.10.11-01:00:49.270[32m info [39m [caliper] [connectors/peer-gateway/PeerGateway] 	disconnecting gRpc client at peer peer0.org1.example.com
+2026.10.11-01:00:49.270[32m info [39m [caliper] [caliper-worker] 	Info: worker 0 prepare test phase for round 3 is completed
+2026.10.11-01:00:49.270[32m info [39m [caliper] [connectors/peer-gateway/PeerGateway] 	disconnecting gRpc client at peer peer0.org1.example.com
+2026.10.11-01:00:49.270[32m info [39m [caliper] [worker-message-handler] 	Worker#0 prepared for Round#3
+2026.10.11-01:00:49.270[32m info [39m [caliper] [caliper-worker] 	Info: worker 1 prepare test phase for round 3 is completed
+2026.10.11-01:00:49.272[32m info [39m [caliper] [worker-message-handler] 	Worker#1 prepared for Round#3
+2026.10.11-01:00:49.274[32m info [39m [caliper] [worker-orchestrator] 	2 workers prepared, progressing to test phase.
+2026.10.11-01:00:49.286[32m info [39m [caliper] [round-orchestrator] 	Monitors successfully started
+2026.10.11-01:00:49.289[32m info [39m [caliper] [worker-message-handler] 	Worker#0 is starting Round#3
+2026.10.11-01:00:49.291[32m info [39m [caliper] [worker-message-handler] 	Worker#1 is starting Round#3
+2026.10.11-01:00:49.296[32m info [39m [caliper] [connectors/peer-gateway/PeerGateway] 	Generating contract map for user User1
+2026.10.11-01:00:49.297[32m info [39m [caliper] [caliper-worker] 	Worker #1 starting workload loop
+2026.10.11-01:00:49.301[32m info [39m [caliper] [connectors/peer-gateway/PeerGateway] 	Generating contract map for user User1
+2026.10.11-01:00:49.302[32m info [39m [caliper] [caliper-worker] 	Worker #0 starting workload loop
+2026.10.11-01:00:54.276[32m info [39m [caliper] [default-observer] 	[getAgent-query Round 3 Transaction Info] - Submitted: 202 Succ: 200 Fail:0 Unfinished:2
+2026.10.11-01:00:59.277[32m info [39m [caliper] [default-observer] 	[getAgent-query Round 3 Transaction Info] - Submitted: 452 Succ: 450 Fail:0 Unfinished:2
+2026.10.11-01:01:00.376[32m info [39m [caliper] [connectors/peer-gateway/PeerGateway] 	disconnecting gateway for user User1
+2026.10.11-01:01:00.376[32m info [39m [caliper] [connectors/peer-gateway/PeerGateway] 	disconnecting gRpc client at peer peer0.org1.example.com
+2026.10.11-01:01:00.377[32m info [39m [caliper] [worker-message-handler] 	Worker#1 finished Round#3
+2026.10.11-01:01:00.378[32m info [39m [caliper] [connectors/peer-gateway/PeerGateway] 	disconnecting gateway for user User1
+2026.10.11-01:01:00.378[32m info [39m [caliper] [connectors/peer-gateway/PeerGateway] 	disconnecting gRpc client at peer peer0.org1.example.com
+2026.10.11-01:01:00.379[32m info [39m [caliper] [worker-message-handler] 	Worker#0 finished Round#3
+2026.10.11-01:01:05.381[32m info [39m [caliper] [default-observer] 	Resetting txCount indicator count
+2026.10.11-01:01:05.381[32m info [39m [caliper] [report-builder] 	### Test result ###
+2026.10.11-01:01:05.383[32m info [39m [caliper] [report-builder] 	
++----------------+------+------+-----------------+-----------------+-----------------+-----------------+------------------+
+| Name           | Succ | Fail | Send Rate (TPS) | Max Latency (s) | Min Latency (s) | Avg Latency (s) | Throughput (TPS) |
+|----------------|------|------|-----------------|-----------------|-----------------|-----------------|------------------|
+| getAgent-query | 500  | 0    | 50.2            | 0.10            | 0.01            | 0.01            | 50.1             |
++----------------+------+------+-----------------+-----------------+-----------------+-----------------+------------------+
+
+2026.10.11-01:01:05.384[32m info [39m [caliper] [round-orchestrator] 	Finished round 4 (getAgent-query) in 10.079 seconds
+2026.10.11-01:01:05.384[32m info [39m [caliper] [monitor.js] 	Stopping all monitors
+2026.10.11-01:01:05.485[32m info [39m [caliper] [round-orchestrator] 	Waiting 5 seconds for the next round...
+2026.10.11-01:01:10.491[32m info [39m [caliper] [round-orchestrator] 	Started round 5 (isRevoked-query)
+2026.10.11-01:01:10.495[32m info [39m [caliper] [worker-message-handler] 	Preparing Worker#0 for Round#4
+2026.10.11-01:01:10.496[32m info [39m [caliper] [worker-message-handler] 	Preparing Worker#1 for Round#4
+2026.10.11-01:01:10.511[32m info [39m [caliper] [connectors/peer-gateway/PeerGateway] 	Generating contract map for user User1
+2026.10.11-01:01:10.511[32m info [39m [caliper] [caliper-worker] 	Info: worker 0 prepare test phase for round 4 is starting...
+2026.10.11-01:01:10.514[32m info [39m [caliper] [connectors/peer-gateway/PeerGateway] 	Generating contract map for user User1
+2026.10.11-01:01:10.514[32m info [39m [caliper] [caliper-worker] 	Info: worker 1 prepare test phase for round 4 is starting...
+2026.10.11-01:01:52.080[32m info [39m [caliper] [connectors/peer-gateway/PeerGateway] 	disconnecting gateway for user User1
+2026.10.11-01:01:52.080[32m info [39m [caliper] [connectors/peer-gateway/PeerGateway] 	disconnecting gateway for user User1
+2026.10.11-01:01:52.082[32m info [39m [caliper] [connectors/peer-gateway/PeerGateway] 	disconnecting gRpc client at peer peer0.org1.example.com
+2026.10.11-01:01:52.083[32m info [39m [caliper] [caliper-worker] 	Info: worker 0 prepare test phase for round 4 is completed
+2026.10.11-01:01:52.083[32m info [39m [caliper] [worker-message-handler] 	Worker#0 prepared for Round#4
+2026.10.11-01:01:52.085[32m info [39m [caliper] [connectors/peer-gateway/PeerGateway] 	disconnecting gRpc client at peer peer0.org1.example.com
+2026.10.11-01:01:52.085[32m info [39m [caliper] [caliper-worker] 	Info: worker 1 prepare test phase for round 4 is completed
+2026.10.11-01:01:52.087[32m info [39m [caliper] [worker-message-handler] 	Worker#1 prepared for Round#4
+2026.10.11-01:01:52.090[32m info [39m [caliper] [worker-orchestrator] 	2 workers prepared, progressing to test phase.
+2026.10.11-01:01:52.099[32m info [39m [caliper] [round-orchestrator] 	Monitors successfully started
+2026.10.11-01:01:52.100[32m info [39m [caliper] [worker-message-handler] 	Worker#0 is starting Round#4
+2026.10.11-01:01:52.104[32m info [39m [caliper] [worker-message-handler] 	Worker#1 is starting Round#4
+2026.10.11-01:01:52.108[32m info [39m [caliper] [connectors/peer-gateway/PeerGateway] 	Generating contract map for user User1
+2026.10.11-01:01:52.109[32m info [39m [caliper] [connectors/peer-gateway/PeerGateway] 	Generating contract map for user User1
+2026.10.11-01:01:52.110[32m info [39m [caliper] [caliper-worker] 	Worker #1 starting workload loop
+2026.10.11-01:01:52.112[32m info [39m [caliper] [caliper-worker] 	Worker #0 starting workload loop
+2026.10.11-01:01:57.092[32m info [39m [caliper] [default-observer] 	[isRevoked-query Round 4 Transaction Info] - Submitted: 202 Succ: 200 Fail:0 Unfinished:2
+2026.10.11-01:02:02.093[32m info [39m [caliper] [default-observer] 	[isRevoked-query Round 4 Transaction Info] - Submitted: 452 Succ: 450 Fail:0 Unfinished:2
+2026.10.11-01:02:03.178[32m info [39m [caliper] [connectors/peer-gateway/PeerGateway] 	disconnecting gateway for user User1
+2026.10.11-01:02:03.178[32m info [39m [caliper] [connectors/peer-gateway/PeerGateway] 	disconnecting gRpc client at peer peer0.org1.example.com
+2026.10.11-01:02:03.178[32m info [39m [caliper] [worker-message-handler] 	Worker#0 finished Round#4
+2026.10.11-01:02:03.181[32m info [39m [caliper] [connectors/peer-gateway/PeerGateway] 	disconnecting gateway for user User1
+2026.10.11-01:02:03.181[32m info [39m [caliper] [connectors/peer-gateway/PeerGateway] 	disconnecting gRpc client at peer peer0.org1.example.com
+2026.10.11-01:02:03.181[32m info [39m [caliper] [worker-message-handler] 	Worker#1 finished Round#4
+2026.10.11-01:02:08.183[32m info [39m [caliper] [default-observer] 	Resetting txCount indicator count
+2026.10.11-01:02:08.184[32m info [39m [caliper] [report-builder] 	### Test result ###
+2026.10.11-01:02:08.186[32m info [39m [caliper] [report-builder] 	
++-----------------+------+------+-----------------+-----------------+-----------------+-----------------+------------------+
+| Name            | Succ | Fail | Send Rate (TPS) | Max Latency (s) | Min Latency (s) | Avg Latency (s) | Throughput (TPS) |
+|-----------------|------|------|-----------------|-----------------|-----------------|-----------------|------------------|
+| isRevoked-query | 500  | 0    | 50.2            | 0.06            | 0.01            | 0.01            | 50.1             |
++-----------------+------+------+-----------------+-----------------+-----------------+-----------------+------------------+
+
+2026.10.11-01:02:08.186[32m info [39m [caliper] [round-orchestrator] 	Finished round 5 (isRevoked-query) in 10.071 seconds
+2026.10.11-01:02:08.186[32m info [39m [caliper] [monitor.js] 	Stopping all monitors
+2026.10.11-01:02:08.290[32m info [39m [caliper] [round-orchestrator] 	Waiting 5 seconds for the next round...
+2026.10.11-01:02:13.296[32m info [39m [caliper] [round-orchestrator] 	Started round 6 (revokeAgent-10tps)
+2026.10.11-01:02:13.299[32m info [39m [caliper] [worker-message-handler] 	Preparing Worker#1 for Round#5
+2026.10.11-01:02:13.297[32m info [39m [caliper] [worker-message-handler] 	Preparing Worker#0 for Round#5
+2026.10.11-01:02:13.310[32m info [39m [caliper] [connectors/peer-gateway/PeerGateway] 	Generating contract map for user User1
+2026.10.11-01:02:13.311[32m info [39m [caliper] [caliper-worker] 	Info: worker 0 prepare test phase for round 5 is starting...
+2026.10.11-01:02:13.315[32m info [39m [caliper] [connectors/peer-gateway/PeerGateway] 	Generating contract map for user User1
+2026.10.11-01:02:13.315[32m info [39m [caliper] [caliper-worker] 	Info: worker 1 prepare test phase for round 5 is starting...
+2026.10.11-01:03:57.480[32m info [39m [caliper] [connectors/peer-gateway/PeerGateway] 	disconnecting gateway for user User1
+2026.10.11-01:03:57.480[32m info [39m [caliper] [connectors/peer-gateway/PeerGateway] 	disconnecting gateway for user User1
+2026.10.11-01:03:57.481[32m info [39m [caliper] [connectors/peer-gateway/PeerGateway] 	disconnecting gRpc client at peer peer0.org1.example.com
+2026.10.11-01:03:57.481[32m info [39m [caliper] [connectors/peer-gateway/PeerGateway] 	disconnecting gRpc client at peer peer0.org1.example.com
+2026.10.11-01:03:57.481[32m info [39m [caliper] [caliper-worker] 	Info: worker 0 prepare test phase for round 5 is completed
+2026.10.11-01:03:57.481[32m info [39m [caliper] [worker-message-handler] 	Worker#0 prepared for Round#5
+2026.10.11-01:03:57.481[32m info [39m [caliper] [caliper-worker] 	Info: worker 1 prepare test phase for round 5 is completed
+2026.10.11-01:03:57.485[32m info [39m [caliper] [worker-message-handler] 	Worker#1 prepared for Round#5
+2026.10.11-01:03:57.486[32m info [39m [caliper] [worker-orchestrator] 	2 workers prepared, progressing to test phase.
+2026.10.11-01:03:57.494[32m info [39m [caliper] [round-orchestrator] 	Monitors successfully started
+2026.10.11-01:03:57.497[32m info [39m [caliper] [worker-message-handler] 	Worker#1 is starting Round#5
+2026.10.11-01:03:57.500[32m info [39m [caliper] [worker-message-handler] 	Worker#0 is starting Round#5
+2026.10.11-01:03:57.502[32m info [39m [caliper] [connectors/peer-gateway/PeerGateway] 	Generating contract map for user User1
+2026.10.11-01:03:57.502[32m info [39m [caliper] [caliper-worker] 	Worker #1 starting workload loop
+2026.10.11-01:03:57.508[32m info [39m [caliper] [connectors/peer-gateway/PeerGateway] 	Generating contract map for user User1
+2026.10.11-01:03:57.508[32m info [39m [caliper] [caliper-worker] 	Worker #0 starting workload loop
+2026.10.11-01:04:02.488[32m info [39m [caliper] [default-observer] 	[revokeAgent-10tps Round 5 Transaction Info] - Submitted: 42 Succ: 40 Fail:0 Unfinished:2
+2026.10.11-01:04:07.488[32m info [39m [caliper] [default-observer] 	[revokeAgent-10tps Round 5 Transaction Info] - Submitted: 100 Succ: 100 Fail:0 Unfinished:0
+2026.10.11-01:04:08.411[32m info [39m [caliper] [connectors/peer-gateway/PeerGateway] 	disconnecting gateway for user User1
+2026.10.11-01:04:08.411[32m info [39m [caliper] [connectors/peer-gateway/PeerGateway] 	disconnecting gRpc client at peer peer0.org1.example.com
+2026.10.11-01:04:08.411[32m info [39m [caliper] [worker-message-handler] 	Worker#1 finished Round#5
+2026.10.11-01:04:08.416[32m info [39m [caliper] [connectors/peer-gateway/PeerGateway] 	disconnecting gateway for user User1
+2026.10.11-01:04:08.418[32m info [39m [caliper] [connectors/peer-gateway/PeerGateway] 	disconnecting gRpc client at peer peer0.org1.example.com
+2026.10.11-01:04:08.419[32m info [39m [caliper] [worker-message-handler] 	Worker#0 finished Round#5
+2026.10.11-01:04:13.425[32m info [39m [caliper] [default-observer] 	Resetting txCount indicator count
+2026.10.11-01:04:13.426[32m info [39m [caliper] [report-builder] 	### Test result ###
+2026.10.11-01:04:13.428[32m info [39m [caliper] [report-builder] 	
++-------------------+------+------+-----------------+-----------------+-----------------+-----------------+------------------+
+| Name              | Succ | Fail | Send Rate (TPS) | Max Latency (s) | Min Latency (s) | Avg Latency (s) | Throughput (TPS) |
+|-------------------|------|------|-----------------|-----------------|-----------------|-----------------|------------------|
+| revokeAgent-10tps | 100  | 0    | 10.2            | 0.90            | 0.07            | 0.48            | 10.1             |
++-------------------+------+------+-----------------+-----------------+-----------------+-----------------+------------------+
+
+2026.10.11-01:04:13.429[32m info [39m [caliper] [round-orchestrator] 	Finished round 6 (revokeAgent-10tps) in 9.913 seconds
+2026.10.11-01:04:13.429[32m info [39m [caliper] [monitor.js] 	Stopping all monitors
+2026.10.11-01:04:13.529[32m info [39m [caliper] [round-orchestrator] 	Waiting 5 seconds for the next round...
+2026.10.11-01:04:18.534[32m info [39m [caliper] [round-orchestrator] 	Started round 7 (anchorAuditBatch-10tps)
+2026.10.11-01:04:18.535[32m info [39m [caliper] [worker-message-handler] 	Preparing Worker#0 for Round#6
+2026.10.11-01:04:18.537[32m info [39m [caliper] [worker-message-handler] 	Preparing Worker#1 for Round#6
+2026.10.11-01:04:18.541[32m info [39m [caliper] [connectors/peer-gateway/PeerGateway] 	Generating contract map for user User1
+2026.10.11-01:04:18.542[32m info [39m [caliper] [caliper-worker] 	Info: worker 1 prepare test phase for round 6 is starting...
+2026.10.11-01:04:18.542[32m info [39m [caliper] [connectors/peer-gateway/PeerGateway] 	Generating contract map for user User1
+2026.10.11-01:04:18.542[32m info [39m [caliper] [caliper-worker] 	Info: worker 0 prepare test phase for round 6 is starting...
+2026.10.11-01:04:18.542[32m info [39m [caliper] [connectors/peer-gateway/PeerGateway] 	disconnecting gateway for user User1
+2026.10.11-01:04:18.543[32m info [39m [caliper] [connectors/peer-gateway/PeerGateway] 	disconnecting gRpc client at peer peer0.org1.example.com
+2026.10.11-01:04:18.543[32m info [39m [caliper] [caliper-worker] 	Info: worker 1 prepare test phase for round 6 is completed
+2026.10.11-01:04:18.543[32m info [39m [caliper] [worker-message-handler] 	Worker#1 prepared for Round#6
+2026.10.11-01:04:18.543[32m info [39m [caliper] [connectors/peer-gateway/PeerGateway] 	disconnecting gateway for user User1
+2026.10.11-01:04:18.543[32m info [39m [caliper] [connectors/peer-gateway/PeerGateway] 	disconnecting gRpc client at peer peer0.org1.example.com
+2026.10.11-01:04:18.543[32m info [39m [caliper] [caliper-worker] 	Info: worker 0 prepare test phase for round 6 is completed
+2026.10.11-01:04:18.543[32m info [39m [caliper] [worker-message-handler] 	Worker#0 prepared for Round#6
+2026.10.11-01:04:18.545[32m info [39m [caliper] [worker-orchestrator] 	2 workers prepared, progressing to test phase.
+2026.10.11-01:04:18.572[32m info [39m [caliper] [round-orchestrator] 	Monitors successfully started
+2026.10.11-01:04:18.576[32m info [39m [caliper] [worker-message-handler] 	Worker#1 is starting Round#6
+2026.10.11-01:04:18.577[32m info [39m [caliper] [worker-message-handler] 	Worker#0 is starting Round#6
+2026.10.11-01:04:18.579[32m info [39m [caliper] [connectors/peer-gateway/PeerGateway] 	Generating contract map for user User1
+2026.10.11-01:04:18.579[32m info [39m [caliper] [caliper-worker] 	Worker #0 starting workload loop
+2026.10.11-01:04:18.580[32m info [39m [caliper] [connectors/peer-gateway/PeerGateway] 	Generating contract map for user User1
+2026.10.11-01:04:18.580[32m info [39m [caliper] [caliper-worker] 	Worker #1 starting workload loop
+2026.10.11-01:04:23.549[32m info [39m [caliper] [default-observer] 	[anchorAuditBatch-10tps Round 6 Transaction Info] - Submitted: 42 Succ: 40 Fail:0 Unfinished:2
+2026.10.11-01:04:28.549[32m info [39m [caliper] [default-observer] 	[anchorAuditBatch-10tps Round 6 Transaction Info] - Submitted: 100 Succ: 100 Fail:0 Unfinished:0
+2026.10.11-01:04:29.489[32m info [39m [caliper] [connectors/peer-gateway/PeerGateway] 	disconnecting gateway for user User1
+2026.10.11-01:04:29.489[32m info [39m [caliper] [connectors/peer-gateway/PeerGateway] 	disconnecting gRpc client at peer peer0.org1.example.com
+2026.10.11-01:04:29.490[32m info [39m [caliper] [worker-message-handler] 	Worker#1 finished Round#6
+2026.10.11-01:04:29.492[32m info [39m [caliper] [connectors/peer-gateway/PeerGateway] 	disconnecting gateway for user User1
+2026.10.11-01:04:29.493[32m info [39m [caliper] [connectors/peer-gateway/PeerGateway] 	disconnecting gRpc client at peer peer0.org1.example.com
+2026.10.11-01:04:29.494[32m info [39m [caliper] [worker-message-handler] 	Worker#0 finished Round#6
+2026.10.11-01:04:34.499[32m info [39m [caliper] [default-observer] 	Resetting txCount indicator count
+2026.10.11-01:04:34.500[32m info [39m [caliper] [report-builder] 	### Test result ###
+2026.10.11-01:04:34.501[32m info [39m [caliper] [report-builder] 	
++------------------------+------+------+-----------------+-----------------+-----------------+-----------------+------------------+
+| Name                   | Succ | Fail | Send Rate (TPS) | Max Latency (s) | Min Latency (s) | Avg Latency (s) | Throughput (TPS) |
+|------------------------|------|------|-----------------|-----------------|-----------------|-----------------|------------------|
+| anchorAuditBatch-10tps | 100  | 0    | 10.2            | 0.93            | 0.07            | 0.49            | 10.1             |
++------------------------+------+------+-----------------+-----------------+-----------------+-----------------+------------------+
+
+2026.10.11-01:04:34.502[32m info [39m [caliper] [round-orchestrator] 	Finished round 7 (anchorAuditBatch-10tps) in 9.909 seconds
+2026.10.11-01:04:34.502[32m info [39m [caliper] [monitor.js] 	Stopping all monitors
+2026.10.11-01:04:34.603[32m info [39m [caliper] [report-builder] 	### All test results ###
+2026.10.11-01:04:34.605[32m info [39m [caliper] [report-builder] 	
++------------------------+------+------+-----------------+-----------------+-----------------+-----------------+------------------+
+| Name                   | Succ | Fail | Send Rate (TPS) | Max Latency (s) | Min Latency (s) | Avg Latency (s) | Throughput (TPS) |
+|------------------------|------|------|-----------------|-----------------|-----------------|-----------------|------------------|
+| registerAgent-10tps    | 100  | 0    | 10.2            | 0.90            | 0.08            | 0.49            | 10.1             |
+|------------------------|------|------|-----------------|-----------------|-----------------|-----------------|------------------|
+| registerAgent-25tps    | 250  | 0    | 25.2            | 0.49            | 0.06            | 0.25            | 25.1             |
+|------------------------|------|------|-----------------|-----------------|-----------------|-----------------|------------------|
+| registerAgent-50tps    | 500  | 0    | 48.3            | 0.71            | 0.08            | 0.32            | 47.5             |
+|------------------------|------|------|-----------------|-----------------|-----------------|-----------------|------------------|
+| getAgent-query         | 500  | 0    | 50.2            | 0.10            | 0.01            | 0.01            | 50.1             |
+|------------------------|------|------|-----------------|-----------------|-----------------|-----------------|------------------|
+| isRevoked-query        | 500  | 0    | 50.2            | 0.06            | 0.01            | 0.01            | 50.1             |
+|------------------------|------|------|-----------------|-----------------|-----------------|-----------------|------------------|
+| revokeAgent-10tps      | 100  | 0    | 10.2            | 0.90            | 0.07            | 0.48            | 10.1             |
+|------------------------|------|------|-----------------|-----------------|-----------------|-----------------|------------------|
+| anchorAuditBatch-10tps | 100  | 0    | 10.2            | 0.93            | 0.07            | 0.49            | 10.1             |
++------------------------+------+------+-----------------+-----------------+-----------------+-----------------+------------------+
+
+2026.10.11-01:04:34.628[32m info [39m [caliper] [report-builder] 	Generated report with path /home/sabbir/Projects/ai-agent-auth/FPAIF-blockchain-main/caliper-workspace/report.html
+2026.10.11-01:04:34.629[32m info [39m [caliper] [monitor.js] 	Stopping all monitors
+2026.10.11-01:04:34.630[32m info [39m [caliper] [worker-orchestrator] 	Sending exit message to connected workers
+2026.10.11-01:04:34.630[32m info [39m [caliper] [worker-message-handler] 	Worker#0 is exiting
+2026.10.11-01:04:34.631[32m info [39m [caliper] [round-orchestrator] 	Benchmark finished in 331.886 seconds. Total rounds: 7. Successful rounds: 7. Failed rounds: 0.
+2026.10.11-01:04:34.631[32m info [39m [caliper] [caliper-engine] 	Skipping end command due to benchmark flow conditioning
+2026.10.11-01:04:34.631[32m info [39m [caliper] [cli-launch-manager] 	Benchmark successfully finished!
+2026.10.11-01:04:34.632[32m info [39m [caliper] [worker-message-handler] 	Worker#1 is exiting

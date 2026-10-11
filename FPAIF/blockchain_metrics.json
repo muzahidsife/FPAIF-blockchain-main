@@ -1,0 +1,114 @@
+{
+  "caliper_rounds": [
+    {
+      "round": "registerAgent-10tps",
+      "success": 100,
+      "fail": 0,
+      "success_rate": 100.0,
+      "send_rate_tps": 10.2,
+      "latency_max_ms": 1220,
+      "latency_min_ms": 70,
+      "latency_avg_ms": 480,
+      "throughput_tps": 10.1
+    },
+    {
+      "round": "registerAgent-25tps",
+      "success": 250,
+      "fail": 0,
+      "success_rate": 100.0,
+      "send_rate_tps": 25.2,
+      "latency_max_ms": 800,
+      "latency_min_ms": 70,
+      "latency_avg_ms": 270,
+      "throughput_tps": 25.0
+    },
+    {
+      "round": "registerAgent-50tps",
+      "success": 500,
+      "fail": 0,
+      "success_rate": 100.0,
+      "send_rate_tps": 50.2,
+      "latency_max_ms": 330,
+      "latency_min_ms": 70,
+      "latency_avg_ms": 170,
+      "throughput_tps": 49.7
+    },
+    {
+      "round": "getAgent-query",
+      "success": 500,
+      "fail": 0,
+      "success_rate": 100.0,
+      "send_rate_tps": 46.2,
+      "latency_max_ms": 380,
+      "latency_min_ms": 10,
+      "latency_avg_ms": 110,
+      "throughput_tps": 46.0
+    },
+    {
+      "round": "isRevoked-query",
+      "success": 500,
+      "fail": 0,
+      "success_rate": 100.0,
+      "send_rate_tps": 48.9,
+      "latency_max_ms": 540,
+      "latency_min_ms": 20,
+      "latency_avg_ms": 120,
+      "throughput_tps": 48.3
+    },
+    {
+      "round": "revokeAgent-10tps",
+      "success": 100,
+      "fail": 0,
+      "success_rate": 100.0,
+      "send_rate_tps": 10.1,
+      "latency_max_ms": 2590,
+      "latency_min_ms": 340,
+      "latency_avg_ms": 1100,
+      "throughput_tps": 9.8
+    },
+    {
+      "round": "anchorAuditBatch-10tps",
+      "success": 100,
+      "fail": 0,
+      "success_rate": 100.0,
+      "send_rate_tps": 10.2,
+      "latency_max_ms": 2100,
+      "latency_min_ms": 360,
+      "latency_avg_ms": 1090,
+      "throughput_tps": 9.6
+    }
+  ],
+  "chain_tx_total": 2050,
+  "chain_tx_success_rate": 100.0,
+  "chain_register_avg_ms": 307,
+  "chain_register_max_throughput_tps": 49.7,
+  "chain_register_success_rate": 100.0,
+  "chain_get_agent_avg_ms": 110,
+  "chain_get_agent_max_throughput_tps": 46.0,
+  "chain_get_agent_success_rate": 100.0,
+  "chain_is_revoked_avg_ms": 120,
+  "chain_is_revoked_max_throughput_tps": 48.3,
+  "chain_is_revoked_success_rate": 100.0,
+  "chain_revoke_avg_ms": 1100,
+  "chain_revoke_max_throughput_tps": 9.8,
+  "chain_revoke_success_rate": 100.0,
+  "chain_anchor_avg_ms": 1090,
+  "chain_anchor_max_throughput_tps": 9.6,
+  "chain_anchor_success_rate": 100.0,
+  "ledger_blocks": 201,
+  "ledger_transactions": 1236,
+  "ledger_latest_block": 201,
+  "ledger_peers": 2,
+  "ledger_avg_tx_per_block": 6.15,
+  "ledger_recent_block_interval_avg_s": 0.791,
+  "ledger_recent_tx_per_block_max": 10,
+  "ledger_tx_by_org": {
+    "OrdererMSP": 2,
+    "Org2MSP": 2,
+    "Org1MSP": 1231
+  },
+  "ledger_chaincode_tx": {
+    "AgentIdentityContract": 1230
+  },
+  "generated_at": "2026-10-10T23:57:11"
+}

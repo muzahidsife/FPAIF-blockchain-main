@@ -1,50 +1,55 @@
 ---
 test:
-  name: Water Sensor Benchmark
-  description: Performance benchmarking for Water Sensor Ranking Chaincode
+  name: FPAIF AgentIdentityContract Benchmark
+  description: On-chain performance of agent registration, lookup, revocation and audit anchoring
   workers:
     number: 2
   rounds:
-    - label: load-100tps
-      description: Test with 100 TPS load
+    - label: registerAgent-10tps
+      description: Register new agent identities at 10 TPS
+      txNumber: 100
+      rateControl: { type: fixed-rate, opts: { tps: 10 } }
+      workload: { module: benchmarks/workload/registerAgent.js }
+
+    - label: registerAgent-25tps
+      txNumber: 250
+      rateControl: { type: fixed-rate, opts: { tps: 25 } }
+      workload: { module: benchmarks/workload/registerAgent.js }
+
+    - label: registerAgent-50tps
       txNumber: 500
-      rateControl:
-        type: fixed-rate
-        opts:
-          tps: 100
-      workload:
-        module: benchmarks/workload/addSensorReadings.js
-        arguments:
-          batchSize: 5
+      rateControl: { type: fixed-rate, opts: { tps: 50 } }
+      workload: { module: benchmarks/workload/registerAgent.js }
 
-    - label: load-500tps
-      description: Test with 500 TPS load
-      txNumber: 1000
-      rateControl:
-        type: fixed-rate
-        opts:
-          tps: 500
-      workload:
-        module: benchmarks/workload/addSensorReadings.js
-        arguments:
-          batchSize: 5
+    - label: getAgent-query
+      description: Read an agent record (authentication lookup)
+      txNumber: 500
+      rateControl: { type: fixed-rate, opts: { tps: 50 } }
+      workload: { module: benchmarks/workload/getAgent.js, arguments: { agents: 20 } }
 
-    - label: load-1000tps
-      description: Test with 1000 TPS load
-      txNumber: 2000
-      rateControl:
-        type: fixed-rate
-        opts:
-          tps: 1000
-      workload:
-        module: benchmarks/workload/addSensorReadings.js
-        arguments:
-          batchSize: 5
+    - label: isRevoked-query
+      description: Revocation check performed on every /authenticate
+      txNumber: 500
+      rateControl: { type: fixed-rate, opts: { tps: 50 } }
+      workload: { module: benchmarks/workload/isRevoked.js, arguments: { agents: 20 } }
+
+    - label: revokeAgent-10tps
+      txNumber: 100
+      rateControl: { type: fixed-rate, opts: { tps: 10 } }
+      workload: { module: benchmarks/workload/revokeAgent.js, arguments: { agents: 50 } }
+
+    - label: anchorAuditBatch-10tps
+      description: Anchor audit-log batch root hashes on chain
+      txNumber: 100
+      rateControl: { type: fixed-rate, opts: { tps: 10 } }
+      workload: { module: benchmarks/workload/anchorAuditBatch.js }
 
 monitors:
   resource:
     - module: docker
       options:
-        interval: 1
+        interval: 2
         containers:
-          - all
+          - peer0.org1.example.com
+          - peer0.org2.example.com
+          - orderer.example.com

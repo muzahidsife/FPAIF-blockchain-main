@@ -1,15 +1,14 @@
 ---
-name: Water Sensor Fabric Network
+name: FPAIF AgentIdentity Fabric Network
 version: "2.0.0"
 
 caliper:
   blockchain: fabric
 
 channels:
-  mychannel:
-    created: true
+  - channelName: mychannel
     contracts:
-      - id: SensorContract
+      - id: AgentIdentityContract
 
 organizations:
   - mspid: Org1MSP
