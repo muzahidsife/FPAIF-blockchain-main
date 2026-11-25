@@ -218,6 +218,10 @@ def get_fabric_client(gateway_url: str = "http://localhost:3000") -> FabricGatew
         FabricGatewayClient instance
     """
     global _client
+    import baselines
+    alt = baselines.get_ledger()      # None in the default 'fabric' mode
+    if alt is not None:
+        return alt
     if _client is None:
         _client = FabricGatewayClient(gateway_url)
     return _client

@@ -21,15 +21,30 @@ from identity import IdentityManager
 from trust import TrustManager
 from fabric_client import get_fabric_client
 import audit_verify
+import baselines
+import os
 
 app = FastAPI(title="AI Agent Identification Framework", version="2.0.0")
 templates = Jinja2Templates(directory="templates")
 
-db               = Database()
+db               = Database(os.environ.get("FPAIF_DB", "ai_agent_framework.db"))
 identity_manager = IdentityManager(db)
 trust_manager    = TrustManager(db)
 fabric           = get_fabric_client()
 db.init_tables()
+
+JWT_MODE = baselines.MODE == "jwt"
+if JWT_MODE:
+    # B0 baseline: a plain token service has no audit trail. Silence FPAIF's DB logging
+    # so the comparison measures the bare minimum, not minimum + logging.
+    db.log_action = lambda *a, **k: None
+    db.log_attack = lambda *a, **k: None
+    db.log_rate_limit = lambda *a, **k: None
+
+
+def lookup_session(token: str):
+    """(did, role) for a valid token, else None. SQLite session in fabric/local mode, JWT in jwt mode."""
+    return baselines.verify_jwt(token) if JWT_MODE else db.get_session(token)
 
 # FIX: register_agent/authenticate call the Fabric gateway synchronously
 # (via `requests`). Running that inside `async def` routes blocked the
@@ -270,9 +285,13 @@ async def authenticate_agent(did: str = Form(...), credential_hash: str = Form(.
                           auth_time_ms=auth_ms, log_time_ms=(time.time() - t_log) * 1000)
             raise HTTPException(status_code=403, detail="Role not authorized")
 
-        session_token = str(uuid.uuid4())
-        db.create_session(session_token, did, agent_role)
-        session_info = db.get_session_details(session_token)
+        if JWT_MODE:
+            session_token, jwt_exp = baselines.issue_jwt(did, agent_role)
+            session_info = {"expires_at": jwt_exp}
+        else:
+            session_token = str(uuid.uuid4())
+            db.create_session(session_token, did, agent_role)
+            session_info = db.get_session_details(session_token)
 
         auth_ms = (time.time() - t0) * 1000
         t_log   = time.time()
@@ -308,7 +327,7 @@ async def api_gateway(session_token: str, request: Request = None):
         raise HTTPException(status_code=429, detail="Rate limit exceeded")
 
     t0           = time.time()
-    session_data = db.get_session(session_token)
+    session_data = lookup_session(session_token)
 
     if not session_data:
         db.log_attack("session_hijacking", "denied",
@@ -376,7 +395,7 @@ async def trigger_anchor(session_token: str = Form(...)):
     # Root hash covers the full chain from genesis to period_end, not just
     # this batch's delta — verify_batch recomputes the same way.
     chain_rows = db.get_audit_logs_up_to(period_end)
-    root_hash  = audit_verify.compute_chain_tip(chain_rows)
+    root_hash  = audit_verify.anchor_root(chain_rows)
 
     try:
         response = await asyncio.to_thread(
@@ -427,6 +446,16 @@ async def test_flow():
     except Exception as e:
         return JSONResponse({"error": str(e)}, status_code=500)
 
+# ── Internal: revoke an agent on the ledger (used by run_rigorous.py) ────────
+
+@app.post("/internal/revoke")
+async def internal_revoke(did: str = Form(...), reason: str = Form("benchmark")):
+    try:
+        res = await asyncio.to_thread(fabric.revoke_agent, did, reason)
+        return JSONResponse({"revoked": bool(res.get("success", True)), "mode": baselines.MODE})
+    except Exception as e:
+        return JSONResponse({"revoked": False, "error": str(e)}, status_code=500)
+
 # ── Internal: reset rate limits between test phases ───────────────────────────
 
 @app.post("/internal/reset_rate_limits")
@@ -437,4 +466,4 @@ async def reset_rate_limits():
 # ── Entry point ───────────────────────────────────────────────────────────────
 
 import uvicorn
-uvicorn.run(app, host="0.0.0.0", port=8000)
+uvicorn.run(app, host="0.0.0.0", port=int(os.environ.get("FPAIF_PORT", "8000")))
