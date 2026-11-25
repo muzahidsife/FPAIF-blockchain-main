@@ -1,0 +1,169 @@
+{
+  "mode": "local",
+  "baseline_clean": [
+    true,
+    true,
+    true,
+    true,
+    true
+  ],
+  "after_revert_clean": [
+    true,
+    true,
+    true,
+    true,
+    true
+  ],
+  "results": [
+    {
+      "attack": "CONTROL: no tampering (false alarms)",
+      "level": "-",
+      "detected": 0,
+      "n": 100,
+      "detect_rate_pct": 0.0,
+      "ci95_low_pct": 0.0,
+      "ci95_high_pct": 3.7,
+      "note": "detected = false alarm; lower is better"
+    },
+    {
+      "attack": "modify a row",
+      "level": 1,
+      "detected": 100,
+      "n": 100,
+      "detect_rate_pct": 100.0,
+      "ci95_low_pct": 96.3,
+      "ci95_high_pct": 100.0,
+      "note": ""
+    },
+    {
+      "attack": "delete a row",
+      "level": 1,
+      "detected": 100,
+      "n": 100,
+      "detect_rate_pct": 100.0,
+      "ci95_low_pct": 96.3,
+      "ci95_high_pct": 100.0,
+      "note": ""
+    },
+    {
+      "attack": "insert a forged row",
+      "level": 1,
+      "detected": 100,
+      "n": 100,
+      "detect_rate_pct": 100.0,
+      "ci95_low_pct": 96.3,
+      "ci95_high_pct": 100.0,
+      "note": ""
+    },
+    {
+      "attack": "reorder two rows",
+      "level": 1,
+      "detected": 100,
+      "n": 100,
+      "detect_rate_pct": 100.0,
+      "ci95_low_pct": 96.3,
+      "ci95_high_pct": 100.0,
+      "note": ""
+    },
+    {
+      "attack": "modify auth_time_ms (latency evidence)",
+      "level": 1,
+      "detected": 100,
+      "n": 100,
+      "detect_rate_pct": 100.0,
+      "ci95_low_pct": 96.3,
+      "ci95_high_pct": 100.0,
+      "note": ""
+    },
+    {
+      "attack": "modify log_time_ms (latency evidence)",
+      "level": 1,
+      "detected": 100,
+      "n": 100,
+      "detect_rate_pct": 100.0,
+      "ci95_low_pct": 96.3,
+      "ci95_high_pct": 100.0,
+      "note": ""
+    },
+    {
+      "attack": "modify anchor_batch_id (display cache)",
+      "level": 1,
+      "detected": 0,
+      "n": 100,
+      "detect_rate_pct": 0.0,
+      "ci95_low_pct": 0.0,
+      "ci95_high_pct": 3.7,
+      "note": ""
+    },
+    {
+      "attack": "modify a row",
+      "level": 2,
+      "detected": 0,
+      "n": 100,
+      "detect_rate_pct": 0.0,
+      "ci95_low_pct": 0.0,
+      "ci95_high_pct": 3.7,
+      "note": "anchor store rewritten by attacker"
+    },
+    {
+      "attack": "delete a row",
+      "level": 2,
+      "detected": 0,
+      "n": 100,
+      "detect_rate_pct": 0.0,
+      "ci95_low_pct": 0.0,
+      "ci95_high_pct": 3.7,
+      "note": "anchor store rewritten by attacker"
+    },
+    {
+      "attack": "insert a forged row",
+      "level": 2,
+      "detected": 0,
+      "n": 100,
+      "detect_rate_pct": 0.0,
+      "ci95_low_pct": 0.0,
+      "ci95_high_pct": 3.7,
+      "note": "anchor store rewritten by attacker"
+    },
+    {
+      "attack": "reorder two rows",
+      "level": 2,
+      "detected": 0,
+      "n": 100,
+      "detect_rate_pct": 0.0,
+      "ci95_low_pct": 0.0,
+      "ci95_high_pct": 3.7,
+      "note": "anchor store rewritten by attacker"
+    },
+    {
+      "attack": "modify auth_time_ms (latency evidence)",
+      "level": 2,
+      "detected": 0,
+      "n": 100,
+      "detect_rate_pct": 0.0,
+      "ci95_low_pct": 0.0,
+      "ci95_high_pct": 3.7,
+      "note": "anchor store rewritten by attacker"
+    },
+    {
+      "attack": "modify log_time_ms (latency evidence)",
+      "level": 2,
+      "detected": 0,
+      "n": 100,
+      "detect_rate_pct": 0.0,
+      "ci95_low_pct": 0.0,
+      "ci95_high_pct": 3.7,
+      "note": "anchor store rewritten by attacker"
+    },
+    {
+      "attack": "modify anchor_batch_id (display cache)",
+      "level": 2,
+      "detected": 0,
+      "n": 100,
+      "detect_rate_pct": 0.0,
+      "ci95_low_pct": 0.0,
+      "ci95_high_pct": 3.7,
+      "note": "anchor store rewritten by attacker"
+    }
+  ]
+}
